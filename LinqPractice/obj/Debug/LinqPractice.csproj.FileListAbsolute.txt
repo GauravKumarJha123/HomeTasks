@@ -1,0 +1,8 @@
+C:\Users\Gaurav_Jha\source\repos\LinqPractice\LinqPractice\obj\Debug\LinqPractice.csproj.AssemblyReference.cache
+C:\Users\Gaurav_Jha\source\repos\LinqPractice\LinqPractice\obj\Debug\LinqPractice.csproj.SuggestedBindingRedirects.cache
+C:\Users\Gaurav_Jha\source\repos\LinqPractice\LinqPractice\obj\Debug\LinqPractice.csproj.CoreCompileInputs.cache
+C:\Users\Gaurav_Jha\source\repos\LinqPractice\LinqPractice\bin\Debug\LinqPractice.exe.config
+C:\Users\Gaurav_Jha\source\repos\LinqPractice\LinqPractice\bin\Debug\LinqPractice.exe
+C:\Users\Gaurav_Jha\source\repos\LinqPractice\LinqPractice\bin\Debug\LinqPractice.pdb
+C:\Users\Gaurav_Jha\source\repos\LinqPractice\LinqPractice\obj\Debug\LinqPractice.exe
+C:\Users\Gaurav_Jha\source\repos\LinqPractice\LinqPractice\obj\Debug\LinqPractice.pdb
