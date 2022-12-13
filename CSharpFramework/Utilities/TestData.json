@@ -1,0 +1,9 @@
+﻿{
+    "username": [ "standard_user", "locked_out_user", "problem_user", "performance_glitch_user" ],
+    "password": "secret_sauce",
+    "FirstName": [ "Json", "xyz", "abc", "asd" ],
+    "LastName": [ "Object", "cvd", "fgh", "jkl" ],
+    "ZipCode": [ "110001", "110022", "345678", "567890" ]
+
+ }
+
