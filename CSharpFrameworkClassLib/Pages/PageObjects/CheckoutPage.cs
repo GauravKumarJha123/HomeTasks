@@ -1,15 +1,18 @@
-﻿using OpenQA.Selenium;
+﻿using AventStack.ExtentReports;
+using CSharpFramework.Utilities.Selenium;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UtilityClassLib.Utilities.Selenium;
 using UtilityLibrary.Utilities.PageUtility;
 
 namespace CSharpFrameworkClassLib.Pages.PageObjects
 {
-    public class CheckoutPage : CartPage
+    public class CheckoutPage : PageUtiltiy
     {
         #region Locators
         By itemsTitle => By.XPath("//div[@class='inventory_item_name']");// IList<IwEbEleem
@@ -36,23 +39,52 @@ namespace CSharpFrameworkClassLib.Pages.PageObjects
         public void FirstName(string user)
         {
             SendKeysWrapper(firstName, user);
+            extentReport.test = extentReport.report.CreateTest("Checkout Test").Info("Checkout Test Started");
+            extentReport.test.Log(Status.Info, "Logging was Sucess");
+            extentReport.test.Log(Status.Info, "Adding Product was Sucess");
+            extentReport.test.Log(Status.Info, "Navigated To Checkout Page");
+            extentReport.test.Log(Status.Info, "First Name is entered");
+
         }
         public void LastName(string lname)
         {
             SendKeysWrapper(lastName, lname);
+            extentReport.test.Log(Status.Info, "Last Name is entered");
+
         }
         public void ZipCode(string code)
         {
             SendKeysWrapper(zipCode, code);
+            extentReport.test.Log(Status.Info, "ZipCode Name is entered");
+
 
         }
-        public void Continue()
+        public void ContinueButton()
         {
             ClickWrapper(continueBtn);
+            extentReport.test.Log(Status.Info, "Continue Button is CLicked");
+
         }
-        public void Finish()
+        public void FinishButton()
         {
             ClickWrapper(finishBtn);
+            extentReport.test.Log(Status.Info, "Finish Button is CLicked");
+            
+        }
+
+        public void VerifyFinishPage()
+        {
+            if (DriverClass.CurrentDriver.Url.Equals(Navigation.finshPageUrl))
+            {
+                if (extentReport.test.Status == Status.Pass)
+                    extentReport.test.Log(Status.Pass, "Checkout Test Passed");
+                else
+                    extentReport.test.Log(Status.Fail, "Checkout Failed");
+            }
+            else
+            {
+                extentReport.test.Log(Status.Fail, "Checkout Failed");
+            }
         }
         #endregion
 

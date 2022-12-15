@@ -3903,6 +3903,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "ExtentReports": "4.1.0",
+          "Selenium.Support": "4.7.0",
           "Selenium.WebDriver": "4.7.0",
           "System.Configuration.ConfigurationManager": "7.0.0",
           "UtilityClassLib": "1.0.0",
@@ -3919,8 +3921,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "ExtentReports": "4.1.0",
           "NUnit": "3.13.3",
-          "Selenium.Support": "4.7.0",
           "Selenium.WebDriver": "4.7.0",
           "System.Configuration.ConfigurationManager": "7.0.0",
           "WebDriverManager": "2.16.2"

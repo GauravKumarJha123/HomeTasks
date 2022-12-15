@@ -1,7 +1,6 @@
 C:\Users\Gaurav_Jha\source\repos\CSharpFramework\UtilityLibrary\bin\Debug\net6.0\selenium-manager\linux\selenium-manager
 C:\Users\Gaurav_Jha\source\repos\CSharpFramework\UtilityLibrary\bin\Debug\net6.0\selenium-manager\macos\selenium-manager
 C:\Users\Gaurav_Jha\source\repos\CSharpFramework\UtilityLibrary\bin\Debug\net6.0\selenium-manager\windows\selenium-manager.exe
-C:\Users\Gaurav_Jha\source\repos\CSharpFramework\UtilityLibrary\bin\Debug\net6.0\UtilityClassLib.dll.config
 C:\Users\Gaurav_Jha\source\repos\CSharpFramework\UtilityLibrary\bin\Debug\net6.0\UtilityClassLib.deps.json
 C:\Users\Gaurav_Jha\source\repos\CSharpFramework\UtilityLibrary\bin\Debug\net6.0\UtilityClassLib.dll
 C:\Users\Gaurav_Jha\source\repos\CSharpFramework\UtilityLibrary\bin\Debug\net6.0\UtilityClassLib.pdb

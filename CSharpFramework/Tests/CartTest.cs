@@ -18,18 +18,15 @@
 //        public void Test3(string userName, string Pass)
 //        {
 
-//            try
-//            {
-
 //                LoginPage loginPage = new LoginPage();
-//                loginPage.EnterUserName(userName);                
+//                loginPage.EnterUserName(userName);
 //                loginPage.UserPass(Pass);
 //                loginPage.ClickLoginButton();
 //                if (userName == "locked_out_user")
 //                {
 //                    throw new ElementNotVisibleException();
 //                }
-//                InventoryPage inventoryPage = new InventoryPage();              
+//                InventoryPage inventoryPage = new InventoryPage();
 
 //                IList<IWebElement> items = inventoryPage.Items();
 
@@ -82,15 +79,6 @@
 
 //                //Thread.Sleep(500);
 //                //EndTest();
-//            }
-//            catch (Exception ex)
-//            {
-//                Console.WriteLine(ex.Message);
-//            }
-
-
-
-
 
 //        }
 

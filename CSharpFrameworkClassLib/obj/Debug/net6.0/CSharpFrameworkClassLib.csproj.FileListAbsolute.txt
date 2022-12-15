@@ -15,5 +15,4 @@ C:\Users\Gaurav_Jha\source\repos\CSharpFramework\CSharpFrameworkClassLib\obj\Deb
 C:\Users\Gaurav_Jha\source\repos\CSharpFramework\CSharpFrameworkClassLib\obj\Debug\net6.0\ref\CSharpFrameworkClassLib.dll
 C:\Users\Gaurav_Jha\source\repos\CSharpFramework\CSharpFrameworkClassLib\bin\Debug\net6.0\UtilityClassLib.dll
 C:\Users\Gaurav_Jha\source\repos\CSharpFramework\CSharpFrameworkClassLib\bin\Debug\net6.0\UtilityClassLib.pdb
-C:\Users\Gaurav_Jha\source\repos\CSharpFramework\CSharpFrameworkClassLib\bin\Debug\net6.0\UtilityClassLib.dll.config
 C:\Users\Gaurav_Jha\source\repos\CSharpFramework\CSharpFrameworkClassLib\obj\Debug\net6.0\CSharpFrameworkClassLib.csproj.CopyComplete

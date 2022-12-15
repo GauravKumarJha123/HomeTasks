@@ -1,4 +1,5 @@
 ﻿using AventStack.ExtentReports.Gherkin.Model;
+using CSharpFramework.Utilities.Selenium;
 using CSharpFrameworkClassLib.Pages.PageObjects;
 using OpenQA.Selenium;
 using System;
@@ -13,43 +14,47 @@ namespace CSharpFramework.Steps
     [Binding]
     public class InventorySteps 
     {
-        private LoginPage  loginPage = new LoginPage();
+        
 
-        private InventoryPage inventoryPage = null;
+        private InventoryPage inventoryPage = new InventoryPage();
 
-        private IList<IWebElement> items;
-        //[Given(@"I Logged in With Valid Credentials")]
-        //public void GivenILoggedInWithValidCredentials()
-        //{
-        //    inventoryPage = loginPage.NavigateToInventoryPage();
-        //    Thread.Sleep(5000);
-        //}
-        [Given(@"I Logged in Sucessfully")]
-        public void GivenILoggedInSucessfully()
+        //private IList<IWebElement> items = inventoryPage.Items();
+
+        [Given(@"I am Logged in With Valid Credentials")]
+        public void GivenIAmLoggedInWithValidCredentials()
         {
-            inventoryPage =  loginPage.NavigateToInventoryPage();
+            Console.WriteLine(DriverClass.CurrentDriver.Url);
+        }
+        [Given(@"I Navigated to Inventory Page")]
+        public void GivenINavigatedToInventoryPage()
+        {
+            Console.WriteLine(DriverClass.CurrentDriver.Url);
         }
 
-        [When(@"I Added Items to Cart")]
+        [When(@"I Added Items To Cart")]
         public void WhenIAddedItemsToCart()
         {
-            items = inventoryPage.Items();
-
+            inventoryPage.AddItemsToCart();
         }
-        [Then(@"I Add items to Cart")]
-        public void ThenIAddItemsToCart()
-        {
-            items = inventoryPage.Items();
-            foreach (var item in items)
-            {
-                item.Click();
-            }
-        }
-        [Then(@"Item are added to the cart")]
-        public void ThenItemAreAddedToTheCart()
+        [When(@"I Click on Cart Button")]
+        public void WhenIClickOnCartButton()
         {
             inventoryPage.ClickCartButton();
         }
+
+        [Then(@"I NAvigate ot Cart Page")]
+        public void ThenINAvigateOtCartPage()
+        {
+            inventoryPage.verifyNavigation();
+        }
+
+        [Then(@"Items are added to the cart")]
+        public void ThenItemsAreAddedToTheCart()
+        {
+            Console.WriteLine(DriverClass.CurrentDriver.Url);
+        }
+
+
 
 
 

@@ -1,4 +1,5 @@
-﻿using CSharpFramework.Utilities.Selenium;
+﻿using AventStack.ExtentReports;
+using CSharpFramework.Utilities.Selenium;
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
@@ -6,21 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UtilityLibrary.Utilities.PageUtility;
+using UtilityClassLib.Utilities.Selenium;
 
 namespace CSharpFrameworkClassLib.Pages.PageObjects
 {
-    public class InventoryPage : LoginPage
+    public class InventoryPage : PageUtiltiy
     {
-        IWebDriver driver = DriverClass.CurrentDriver;
-        public InventoryPage()
-        {
-                
-        }
-
-        public InventoryPage(IWebDriver driver)
-        {
-                this.driver= driver;
-        }
+        
+        
         #region locators
         private By items => By.XPath("//button[@class='btn btn_primary btn_small btn_inventory']");
 
@@ -35,24 +29,56 @@ namespace CSharpFrameworkClassLib.Pages.PageObjects
 
         public IList<IWebElement> Items()
         {
+            extentReport.test = extentReport.report.CreateTest("InventoryTest").Info("Inventory Test Started");
+            extentReport.test.Log(Status.Info, "Logging was Sucess");
+            extentReport.test.Log(Status.Info, "Products are Visible");
             return GetLists(items);
+
         }
 
         public IList<IWebElement> getItemsTitle()
         {
+            extentReport.test.Log(Status.Info, "Products titles are Visible");
             return GetLists(itemsTitle);
         }
 
         public IList<IWebElement> getItemsPrice()
         {
+            extentReport.test.Log(Status.Info, "Products Prices are Visible");
             return GetLists(itemsPrice);
+
+        }
+
+      
+        public void AddItemsToCart()
+        {
+            IList<IWebElement> products = Items();
+            foreach(var product in products)
+            {
+                product.Click();
+            }
+            extentReport.test.Log(Status.Info, "Items are Added To Cart");
         }
 
         public void ClickCartButton()
         {
             ClickWrapper(cartBtn);
+            extentReport.test.Log(Status.Info, "Cart Button is Clicked");
+            
         }
-        
+
+
+        public void verifyNavigation()
+        {
+            if (DriverClass.CurrentDriver.Url.Equals(Navigation.cartPageUrl))
+            {
+                extentReport.test.Log(Status.Pass, "Inventory Test Passed");
+            }
+            else
+            {
+                extentReport.test.Log(Status.Fail, "Inventory Test Failed");
+            }
+        }
         public By ByItemsElements()
         {
             return items;
