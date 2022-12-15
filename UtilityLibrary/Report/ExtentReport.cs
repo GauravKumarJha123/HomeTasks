@@ -17,17 +17,11 @@ namespace UtilityClassLib.Report
 
     public class ExtentReport
     {
-        public ExtentReports report;
+        public ExtentReports report = new ExtentReports();
         public ExtentTest test;
         //[OneTimeSetUp]
         public void ExtentStart()
         {
-            report = new ExtentReports();
-            
-            //string workingDirectory = Environment.CurrentDirectory;
-            //string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
-            //string reportPath = projectDirectory + "//report.html";
-            //var htmlReporter = new ExtentHtmlReporter(reportPath);
             var htmlReporter = new ExtentHtmlReporter(ConfigurationManager.AppSettings["extentReportFilePath"]);
             report.AttachReporter(htmlReporter);
             report.AddSystemInfo("Host Name", "Local host");
@@ -36,27 +30,6 @@ namespace UtilityClassLib.Report
         }
         //[OneTimeTearDown]
         public void ExtentClose()
-        {
-            //var status = TestContext.CurrentContext.Result.Outcome.Status;
-            //var stackTrace = TestContext.CurrentContext.Result.StackTrace;
-            //DateTime time = DateTime.Now;
-            //String fileName = "Screenshot_" + time.ToString("h_mm_ss") + ".png";
-
-            //if (status == TestStatus.Failed)
-            //{
-            //    test.Fail("Test Failed", captureScreenShot(DriverClass.CurrentDriver, fileName));
-            //    test.Log(Status.Fail, "test failed with logtrace" + stackTrace);
-            //}
-            //else if (status == TestStatus.Passed)
-            //{
-            //    test.Pass("Test Passed", captureScreenShot(DriverClass.CurrentDriver, fileName));
-            //    test.Log(Status.Pass, "test Passed with logtrace" + stackTrace);
-            //}
-
-            report.Flush();
-        }
-
-        public void ExtentConfig()
         {
             var status = TestContext.CurrentContext.Result.Outcome.Status;
             var stackTrace = TestContext.CurrentContext.Result.StackTrace;
@@ -73,7 +46,28 @@ namespace UtilityClassLib.Report
                 test.Pass("Test Passed", captureScreenShot(DriverClass.CurrentDriver, fileName));
                 test.Log(Status.Pass, "test Passed with logtrace" + stackTrace);
             }
+
+            report.Flush();
         }
+
+        //public void ExtentConfig()
+        //{
+        //    var status = TestContext.CurrentContext.Result.Outcome.Status;
+        //    var stackTrace = TestContext.CurrentContext.Result.StackTrace;
+        //    DateTime time = DateTime.Now;
+        //    String fileName = "Screenshot_" + time.ToString("h_mm_ss") + ".png";
+
+        //    if (status == TestStatus.Failed)
+        //    {
+        //        test.Fail("Test Failed", captureScreenShot(DriverClass.CurrentDriver, fileName));
+        //        test.Log(Status.Fail, "test failed with logtrace" + stackTrace);
+        //    }
+        //    else if (status == TestStatus.Passed)
+        //    {
+        //        test.Pass("Test Passed", captureScreenShot(DriverClass.CurrentDriver, fileName));
+        //        test.Log(Status.Pass, "test Passed with logtrace" + stackTrace);
+        //    }
+        //}
 
         //public void Conig()
         //{

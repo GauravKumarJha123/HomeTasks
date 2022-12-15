@@ -21,8 +21,6 @@ namespace CSharpFrameworkClassLib.Pages.PageObjects
         private By loginBtn => By.XPath("//*[@id=\"login-button\"]");
         #endregion
 
-
-
         #region Events
 
         public void NavigateBaseUrl()
