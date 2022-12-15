@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 using UtilityClassLib.Utilities.Selenium;
 using UtilityLibrary.Utilities.PageUtility;
 using AventStack.ExtentReports;
+using NUnit.Framework;
+using NUnit.Framework.Interfaces;
+using UtilityClassLib.Report;
 
 namespace CSharpFrameworkClassLib.Pages.PageObjects
 {
@@ -22,8 +25,11 @@ namespace CSharpFrameworkClassLib.Pages.PageObjects
         #endregion
 
         #region Events
+        
 
-        public void NavigateBaseUrl()
+           
+
+            public void NavigateBaseUrl()
         {
             NavigatWrapper(Navigation.baseUrl);
             Maximize();
@@ -63,8 +69,13 @@ namespace CSharpFrameworkClassLib.Pages.PageObjects
 
         public void Verify()
         {
-            if (VerifyNavigationToInventoryPage()) extentReport.test.Log(Status.Pass, "Login is SucessFull"); 
-            else extentReport.test.Log(Status.Fail, "Login is Not Sucessfull");
+            DateTime time = DateTime.Now;
+            String fileName = "Screenshot_" + time.ToString("h_mm_ss") + ".png";
+            if (VerifyNavigationToInventoryPage())
+            {
+                extentReport.test.Log(Status.Pass, ExtentReport.captureScreenShot(DriverClass.CurrentDriver, fileName));
+            }
+            else extentReport.test.Log(Status.Fail, ExtentReport.captureScreenShot(DriverClass.CurrentDriver, fileName));
         }
         //public InventoryPage NavigateToInventoryPage()
         //{

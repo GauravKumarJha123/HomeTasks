@@ -52,19 +52,10 @@ namespace CSharpFramework.Hooks
         [BeforeScenario("Checkout")]
         public void CartHooks()
         {
-            //InventoryPage inventoryPage = new InventoryPage();
-            //inventoryPage.ClickCartButton();
             CartPage cartPage = new CartPage();
             cartPage.VerifyListofProducts();
             cartPage.IntiateCheckout();
         }
-        //[Before]
-        //[Scope(Tag = "Firefox")]
-        //internal static void StartFirefoxDriver()
-        //{
-        //    DriverClass.Init("Firefox");
-
-        //}
 
         [AfterScenario]
         public void StopWebDriver()

@@ -19,7 +19,7 @@ namespace UtilityClassLib.Report
     {
         public ExtentReports report = new ExtentReports();
         public ExtentTest test;
-        //[OneTimeSetUp]
+        
         public void ExtentStart()
         {
             var htmlReporter = new ExtentHtmlReporter(ConfigurationManager.AppSettings["extentReportFilePath"]);
@@ -28,24 +28,24 @@ namespace UtilityClassLib.Report
             report.AddSystemInfo("Environment", "QA");
             report.AddSystemInfo("Username", "Gaurav Jha");
         }
-        //[OneTimeTearDown]
+        
         public void ExtentClose()
         {
-            var status = TestContext.CurrentContext.Result.Outcome.Status;
-            var stackTrace = TestContext.CurrentContext.Result.StackTrace;
-            DateTime time = DateTime.Now;
-            String fileName = "Screenshot_" + time.ToString("h_mm_ss") + ".png";
+            //var status = TestContext.CurrentContext.Result.Outcome.Status;
+            //var stackTrace = TestContext.CurrentContext.Result.StackTrace;
+            //DateTime time = DateTime.Now;
+            //String fileName = "Screenshot_" + time.ToString("h_mm_ss") + ".png";
 
-            if (status == TestStatus.Failed)
-            {
-                test.Fail("Test Failed", captureScreenShot(DriverClass.CurrentDriver, fileName));
-                test.Log(Status.Fail, "test failed with logtrace" + stackTrace);
-            }
-            else if (status == TestStatus.Passed)
-            {
-                test.Pass("Test Passed", captureScreenShot(DriverClass.CurrentDriver, fileName));
-                test.Log(Status.Pass, "test Passed with logtrace" + stackTrace);
-            }
+            //if (status == TestStatus.Failed)
+            //{
+            //    test.Fail("Test Failed", captureScreenShot(DriverClass.CurrentDriver, fileName));
+            //    test.Log(Status.Fail, "test failed with logtrace" + stackTrace);
+            //}
+            //else if (status == TestStatus.Passed)
+            //{
+            //    test.Pass("Test Passed", captureScreenShot(DriverClass.CurrentDriver, fileName));
+            //    test.Log(Status.Pass, "test Passed with logtrace" + stackTrace);
+            //}
 
             report.Flush();
         }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UtilityLibrary.Utilities.PageUtility;
 using UtilityClassLib.Utilities.Selenium;
+using UtilityClassLib.Report;
 
 namespace CSharpFrameworkClassLib.Pages.PageObjects
 {
@@ -33,7 +34,6 @@ namespace CSharpFrameworkClassLib.Pages.PageObjects
             extentReport.test.Log(Status.Info, "Logging was Sucess");
             extentReport.test.Log(Status.Info, "Products are Visible");
             return GetLists(items);
-
         }
 
         public IList<IWebElement> getItemsTitle()
@@ -72,11 +72,11 @@ namespace CSharpFrameworkClassLib.Pages.PageObjects
         {
             if (DriverClass.CurrentDriver.Url.Equals(Navigation.cartPageUrl))
             {
-                extentReport.test.Log(Status.Pass, "Inventory Test Passed");
+                extentReport.test.Log(Status.Pass, ExtentReport.captureScreenShot(DriverClass.CurrentDriver, "pass"));
             }
             else
             {
-                extentReport.test.Log(Status.Fail, "Inventory Test Failed");
+                extentReport.test.Log(Status.Fail, ExtentReport.captureScreenShot(DriverClass.CurrentDriver, "fail"));
             }
         }
         public By ByItemsElements()

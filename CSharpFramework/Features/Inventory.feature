@@ -1,6 +1,6 @@
 ﻿@Chrome
 @Inventory
-Feature: Inventory
+Feature: Inventory Execution Order = 2
 
 Verifying whether items are added to the cart
 

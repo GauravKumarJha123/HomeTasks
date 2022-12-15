@@ -1,4 +1,4 @@
-﻿Feature: Cart
+﻿Feature: Cart Execution Order = 3
 
 Verifying The Cart Page
 

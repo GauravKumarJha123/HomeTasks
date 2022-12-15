@@ -1,10 +1,12 @@
 ﻿using AventStack.ExtentReports;
+using CSharpFramework.Utilities.Selenium;
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UtilityClassLib.Report;
 using UtilityLibrary.Utilities.PageUtility;
 
 namespace CSharpFrameworkClassLib.Pages.PageObjects
@@ -61,11 +63,13 @@ namespace CSharpFrameworkClassLib.Pages.PageObjects
             extentReport.test.Log(Status.Info, "Adding Product was Sucess");
             if (VerifyItemsAreCorrect())
             {
-                extentReport.test.Log(Status.Pass, "Same Product are in Cart Page");
+                extentReport.test.Log(Status.Pass, ExtentReport.captureScreenShot(DriverClass.CurrentDriver, "Same Product are in Cart Page"));
                 
             }
-            else extentReport.test.Log(Status.Fail, "Same Product was not there in Cart Page");
-
+            else{
+                extentReport.test.Log(Status.Fail, ExtentReport.captureScreenShot(DriverClass.CurrentDriver, "Same Product was not there in Cart Page"));
+                
+            }
         }
 
         //public void TestPassed()

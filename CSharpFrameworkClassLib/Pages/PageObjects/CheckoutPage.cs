@@ -7,6 +7,7 @@ using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UtilityClassLib.Report;
 using UtilityClassLib.Utilities.Selenium;
 using UtilityLibrary.Utilities.PageUtility;
 
@@ -77,13 +78,20 @@ namespace CSharpFrameworkClassLib.Pages.PageObjects
             if (DriverClass.CurrentDriver.Url.Equals(Navigation.finshPageUrl))
             {
                 if (extentReport.test.Status == Status.Pass)
-                    extentReport.test.Log(Status.Pass, "Checkout Test Passed");
+                {
+                    extentReport.test.Log(Status.Pass, ExtentReport.captureScreenShot(DriverClass.CurrentDriver, "Checkout Test Passed"));
+                    
+                }
                 else
-                    extentReport.test.Log(Status.Fail, "Checkout Failed");
+                {
+                    extentReport.test.Log(Status.Fail, ExtentReport.captureScreenShot(DriverClass.CurrentDriver, "Checkout Failed"));
+                    
+                }
             }
             else
             {
-                extentReport.test.Log(Status.Fail, "Checkout Failed");
+                extentReport.test.Log(Status.Fail, ExtentReport.captureScreenShot(DriverClass.CurrentDriver, "Checkout Failed"));
+                
             }
         }
         #endregion
