@@ -1,7 +1,7 @@
 ﻿@Chrome
 @Login
 
-Feature: LoginScenarios Execution Order = 1
+Feature: 01. LoginScenarios 
 
 Verify Login Functionality Of Sauce Demo Website
 

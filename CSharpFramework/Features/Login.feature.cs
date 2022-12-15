@@ -20,10 +20,10 @@ namespace CSharpFramework.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("LoginScenarios Execution Order = 1")]
+    [NUnit.Framework.DescriptionAttribute("01. LoginScenarios")]
     [NUnit.Framework.CategoryAttribute("Chrome")]
     [NUnit.Framework.CategoryAttribute("Login")]
-    public partial class LoginScenariosExecutionOrder1Feature
+    public partial class _01_LoginScenariosFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
@@ -39,7 +39,7 @@ namespace CSharpFramework.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "LoginScenarios Execution Order = 1", "Verify Login Functionality Of Sauce Demo Website", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "01. LoginScenarios", "Verify Login Functionality Of Sauce Demo Website", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         

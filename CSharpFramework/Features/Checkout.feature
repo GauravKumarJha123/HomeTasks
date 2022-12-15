@@ -1,4 +1,4 @@
-﻿Feature: Checkout Execution Order = 4
+﻿Feature: 04. Checkout 
 
 Verfying Checkout Feature Page
 

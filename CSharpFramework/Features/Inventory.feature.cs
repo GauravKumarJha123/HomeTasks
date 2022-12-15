@@ -20,10 +20,10 @@ namespace CSharpFramework.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Inventory Execution Order = 2")]
+    [NUnit.Framework.DescriptionAttribute("02. Inventory")]
     [NUnit.Framework.CategoryAttribute("Chrome")]
     [NUnit.Framework.CategoryAttribute("Inventory")]
-    public partial class InventoryExecutionOrder2Feature
+    public partial class _02_InventoryFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
@@ -39,7 +39,7 @@ namespace CSharpFramework.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Inventory Execution Order = 2", "Verifying whether items are added to the cart", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "02. Inventory", "Verifying whether items are added to the cart", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         

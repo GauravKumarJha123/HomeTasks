@@ -17,7 +17,7 @@ namespace CSharpFramework.Hooks
     public sealed class SpecFlowHooks : BaseTest
     {
 
-        
+
         [BeforeScenario]
         //[Scope(Tag = "Chrome")]
         public void StartChromeDriver()
@@ -25,10 +25,9 @@ namespace CSharpFramework.Hooks
             Setup();
         }
 
-        [BeforeScenario]
-        [Scope(Tag = "Inventory")]
-        [Scope(Tag = "Cart")]
-        [Scope(Tag = "Checkout")]
+        [BeforeScenario("Inventory")]
+        [BeforeScenario("Cart")]
+        [BeforeScenario("Checkout")]
         public void LoginHooks()
         {
             LoginPage loginPage = new LoginPage();
