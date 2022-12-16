@@ -1,0 +1,15 @@
+C:\Users\Gaurav_Jha\source\repos\Task7POM\Task7POM\bin\Debug\net6.0\selenium-manager\linux\selenium-manager
+C:\Users\Gaurav_Jha\source\repos\Task7POM\Task7POM\bin\Debug\net6.0\selenium-manager\macos\selenium-manager
+C:\Users\Gaurav_Jha\source\repos\Task7POM\Task7POM\bin\Debug\net6.0\selenium-manager\windows\selenium-manager.exe
+C:\Users\Gaurav_Jha\source\repos\Task7POM\Task7POM\bin\Debug\net6.0\Task7POM.deps.json
+C:\Users\Gaurav_Jha\source\repos\Task7POM\Task7POM\bin\Debug\net6.0\Task7POM.dll
+C:\Users\Gaurav_Jha\source\repos\Task7POM\Task7POM\bin\Debug\net6.0\Task7POM.pdb
+C:\Users\Gaurav_Jha\source\repos\Task7POM\Task7POM\obj\Debug\net6.0\Task7POM.csproj.AssemblyReference.cache
+C:\Users\Gaurav_Jha\source\repos\Task7POM\Task7POM\obj\Debug\net6.0\Task7POM.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gaurav_Jha\source\repos\Task7POM\Task7POM\obj\Debug\net6.0\Task7POM.AssemblyInfoInputs.cache
+C:\Users\Gaurav_Jha\source\repos\Task7POM\Task7POM\obj\Debug\net6.0\Task7POM.AssemblyInfo.cs
+C:\Users\Gaurav_Jha\source\repos\Task7POM\Task7POM\obj\Debug\net6.0\Task7POM.csproj.CoreCompileInputs.cache
+C:\Users\Gaurav_Jha\source\repos\Task7POM\Task7POM\obj\Debug\net6.0\Task7POM.dll
+C:\Users\Gaurav_Jha\source\repos\Task7POM\Task7POM\obj\Debug\net6.0\refint\Task7POM.dll
+C:\Users\Gaurav_Jha\source\repos\Task7POM\Task7POM\obj\Debug\net6.0\Task7POM.pdb
+C:\Users\Gaurav_Jha\source\repos\Task7POM\Task7POM\obj\Debug\net6.0\ref\Task7POM.dll
