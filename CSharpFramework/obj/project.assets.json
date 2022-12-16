@@ -3899,7 +3899,7 @@
           "lib/netstandard2.1/WebDriverManager.dll": {}
         }
       },
-      "CSharpFrameworkClassLib/1.0.0": {
+      "SauceDemoPages/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
@@ -3911,10 +3911,10 @@
           "WebDriverManager": "2.16.2"
         },
         "compile": {
-          "bin/placeholder/CSharpFrameworkClassLib.dll": {}
+          "bin/placeholder/SauceDemoPages.dll": {}
         },
         "runtime": {
-          "bin/placeholder/CSharpFrameworkClassLib.dll": {}
+          "bin/placeholder/SauceDemoPages.dll": {}
         }
       },
       "UtilityClassLib/1.0.0": {
@@ -11277,10 +11277,10 @@
         "webdrivermanager.nuspec"
       ]
     },
-    "CSharpFrameworkClassLib/1.0.0": {
+    "SauceDemoPages/1.0.0": {
       "type": "project",
-      "path": "../CSharpFrameworkClassLib/CSharpFrameworkClassLib.csproj",
-      "msbuildProject": "../CSharpFrameworkClassLib/CSharpFrameworkClassLib.csproj"
+      "path": "../CSharpFrameworkClassLib/SauceDemoPages.csproj",
+      "msbuildProject": "../CSharpFrameworkClassLib/SauceDemoPages.csproj"
     },
     "UtilityClassLib/1.0.0": {
       "type": "project",
@@ -11290,7 +11290,6 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "CSharpFrameworkClassLib >= 1.0.0",
       "DotNetSeleniumExtras.PageObjects >= 3.11.0",
       "DotNetSeleniumExtras.PageObjects.Core >= 4.3.0",
       "DotNetSeleniumExtras.WaitHelpers >= 3.11.0",
@@ -11299,6 +11298,7 @@
       "NUnit >= 3.13.3",
       "NUnit.Analyzers >= 3.5.0",
       "NUnit3TestAdapter >= 4.3.1",
+      "SauceDemoPages >= 1.0.0",
       "Selenium.Support >= 4.7.0",
       "Selenium.WebDriver >= 4.7.0",
       "SpecFlow >= 3.9.74",
@@ -11315,9 +11315,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gaurav_Jha\\source\\repos\\CSharpFramework\\CSharpFramework\\CSharpFramework.csproj",
-      "projectName": "CSharpFramework",
-      "projectPath": "C:\\Users\\Gaurav_Jha\\source\\repos\\CSharpFramework\\CSharpFramework\\CSharpFramework.csproj",
+      "projectUniqueName": "C:\\Users\\Gaurav_Jha\\source\\repos\\CSharpFramework\\CSharpFramework\\SauceDemoTestProject.csproj",
+      "projectName": "SauceDemoTestProject",
+      "projectPath": "C:\\Users\\Gaurav_Jha\\source\\repos\\CSharpFramework\\CSharpFramework\\SauceDemoTestProject.csproj",
       "packagesPath": "C:\\Users\\Gaurav_Jha\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Gaurav_Jha\\source\\repos\\CSharpFramework\\CSharpFramework\\obj\\",
       "projectStyle": "PackageReference",
@@ -11340,8 +11340,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Gaurav_Jha\\source\\repos\\CSharpFramework\\CSharpFrameworkClassLib\\CSharpFrameworkClassLib.csproj": {
-              "projectPath": "C:\\Users\\Gaurav_Jha\\source\\repos\\CSharpFramework\\CSharpFrameworkClassLib\\CSharpFrameworkClassLib.csproj"
+            "C:\\Users\\Gaurav_Jha\\source\\repos\\CSharpFramework\\CSharpFrameworkClassLib\\SauceDemoPages.csproj": {
+              "projectPath": "C:\\Users\\Gaurav_Jha\\source\\repos\\CSharpFramework\\CSharpFrameworkClassLib\\SauceDemoPages.csproj"
             }
           }
         }

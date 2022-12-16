@@ -1,25 +1,8 @@
-﻿using NUnit.Framework;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Edge;
-using OpenQA.Selenium.Firefox;
-using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WebDriverManager.DriverConfigs.Impl;
-using AventStack.ExtentReports.Reporter;
-using AventStack.ExtentReports;
-using NUnit.Framework.Interfaces;
-using Microsoft.Extensions.Configuration;
-using UtilityLibrary.Utilities.PageUtility;
-using CSharpFramework.Utilities.Selenium;
+﻿using UtilityClassLib.Utilities.Selenium;
 
-namespace CSharpFramework.Utilities
+namespace UtilityClassLib.Utilities
 {
-    public class BaseTest : DriverClass
+    public class BaseTest : BasePage
     {
         [SetUp]
         public void Setup()

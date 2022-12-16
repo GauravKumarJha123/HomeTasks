@@ -1,13 +1,7 @@
 ﻿using AventStack.ExtentReports;
-using CSharpFramework.Utilities.Selenium;
-using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UtilityLibrary.Utilities.PageUtility;
 using UtilityClassLib.Utilities.Selenium;
+using OpenQA.Selenium;
+using UtilityLibrary.Utilities.PageUtility;
 using UtilityClassLib.Report;
 
 namespace CSharpFrameworkClassLib.Pages.PageObjects
@@ -18,37 +12,34 @@ namespace CSharpFrameworkClassLib.Pages.PageObjects
         
         #region locators
         private By items => By.XPath("//button[@class='btn btn_primary btn_small btn_inventory']");
+        private By itemsTitle => GetXpathUsingDivClass("inventory_item_name");
+        private By itemsPrice => GetXpathUsingDivClass("inventory_item_price");
+        private By cartBtn => GetByID("shopping_cart_container");
 
-        private By itemsTitle => By.XPath("//div[@class='inventory_item_name']");
+        #endregion
 
-        private By itemsPrice => By.XPath("//div[@class='inventory_item_price']");
-
-        private By cartBtn => By.XPath("//div[@id='shopping_cart_container']");
-
-
-        #region Elements
+        #region Actions
 
         public IList<IWebElement> Items()
         {
-            extentReport.test = extentReport.report.CreateTest("InventoryTest").Info("Inventory Test Started");
-            extentReport.test.Log(Status.Info, "Logging was Sucess");
-            extentReport.test.Log(Status.Info, "Products are Visible");
+            ExtentObj.Test = ExtentObj.Report.CreateTest("InventoryTest").Info("Inventory Test Started");
+            ExtentObj.Test.Log(Status.Info, "Logging was Sucess");
+            ExtentObj.Test.Log(Status.Info, "Products are Visible");
             return GetLists(items);
         }
 
         public IList<IWebElement> getItemsTitle()
         {
-            extentReport.test.Log(Status.Info, "Products titles are Visible");
+            ExtentObj.Test.Log(Status.Info, "Products titles are Visible");
             return GetLists(itemsTitle);
         }
 
         public IList<IWebElement> getItemsPrice()
         {
-            extentReport.test.Log(Status.Info, "Products Prices are Visible");
+            ExtentObj.Test.Log(Status.Info, "Products Prices are Visible");
             return GetLists(itemsPrice);
 
         }
-
       
         public void AddItemsToCart()
         {
@@ -57,26 +48,25 @@ namespace CSharpFrameworkClassLib.Pages.PageObjects
             {
                 product.Click();
             }
-            extentReport.test.Log(Status.Info, "Items are Added To Cart");
+            ExtentObj.Test.Log(Status.Info, "Items are Added To Cart");
         }
 
         public void ClickCartButton()
         {
             ClickWrapper(cartBtn);
-            extentReport.test.Log(Status.Info, "Cart Button is Clicked");
+            ExtentObj.Test.Log(Status.Info, "Cart Button is Clicked");
             
         }
 
-
         public void verifyNavigation()
         {
-            if (DriverClass.CurrentDriver.Url.Equals(Navigation.cartPageUrl))
+            if (BasePage.CurrentDriver.Url.Equals(Navigation.cartPageUrl))
             {
-                extentReport.test.Log(Status.Pass, ExtentReport.captureScreenShot(DriverClass.CurrentDriver, "pass"));
+                ExtentObj.Test.Log(Status.Pass, ExtentReport.CaptureScreenShot(BasePage.CurrentDriver, "pass"));
             }
             else
             {
-                extentReport.test.Log(Status.Fail, ExtentReport.captureScreenShot(DriverClass.CurrentDriver, "fail"));
+                ExtentObj.Test.Log(Status.Fail, ExtentReport.CaptureScreenShot(BasePage.CurrentDriver, "fail"));
             }
         }
         public By ByItemsElements()
@@ -87,32 +77,7 @@ namespace CSharpFrameworkClassLib.Pages.PageObjects
         {
             return itemsPrice;
         }
-        //public IList<IWebElement> getItemsTitle()
-        //{
-        //    return itemsTitle;
-        //}
-        //public IList<IWebElement> getItemsPrice()
-        //{
-        //    return itemsPrice;
-        //}
-
-        //public CartPage ClickCheckoutButton()
-        //{
-        //     cartBtn.Click();
-        //     return new CartPage(driver);
-        //}
-        #endregion
-
-        //public IWebElement webElementitem1()
-        //{
-        //    return item1;
-        //}
-
-        //public void WaitForPageDisplay()
-        //{
-        //    WebDriver wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
-        //    wait
-        //}
+       
         #endregion
 
     }

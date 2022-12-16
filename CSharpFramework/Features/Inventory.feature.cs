@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace CSharpFramework.Features
+namespace SauceDemoTestProject.Features
 {
     using TechTalk.SpecFlow;
     using System;

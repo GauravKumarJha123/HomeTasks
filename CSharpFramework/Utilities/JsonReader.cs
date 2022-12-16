@@ -8,7 +8,7 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace CSharpFramework.Utilities
+namespace UtilityClassLib.Utilities
 {
     public class JsonReader
     {

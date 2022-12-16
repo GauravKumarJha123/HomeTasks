@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TechTalk.SpecFlow;
-using UtilityLibrary.Utilities.PageUtility;
-using CSharpFramework.Utilities.Selenium;
-using CSharpFramework.Utilities;
+﻿using TechTalk.SpecFlow;
+using UtilityClassLib.Utilities;
 using CSharpFrameworkClassLib.Pages.PageObjects;
 
-namespace CSharpFramework.Hooks
+namespace UtilityClassLib.Hooks
 {
     //private BasePage basePage = new BasePage();
 
@@ -33,9 +26,9 @@ namespace CSharpFramework.Hooks
             LoginPage loginPage = new LoginPage();
             loginPage.NavigateBaseUrl();
             loginPage.EnterUserName("standard_user");
-            loginPage.UserPass("secret_sauce");
+            loginPage.UserPassword("secret_sauce");
             loginPage.ClickLoginButton();
-            loginPage.Verify();
+            loginPage.VerifyNavigationToInventoryPage();
 
         }
         [BeforeScenario("Checkout")]

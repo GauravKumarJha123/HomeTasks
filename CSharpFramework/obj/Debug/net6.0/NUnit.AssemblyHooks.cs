@@ -9,13 +9,13 @@ using global::System.Runtime.CompilerServices;
 
 [GeneratedCode("SpecFlow", "3.9.74")]
 [SetUpFixture]
-public class CSharpFramework_NUnitAssemblyHooks
+public class SauceDemoTestProject_NUnitAssemblyHooks
 {
     [OneTimeSetUp]
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void AssemblyInitialize()
     {
-        var currentAssembly = typeof(CSharpFramework_NUnitAssemblyHooks).Assembly;
+        var currentAssembly = typeof(SauceDemoTestProject_NUnitAssemblyHooks).Assembly;
 
         TestRunnerManager.OnTestRunStart(currentAssembly);
     }
@@ -24,7 +24,7 @@ public class CSharpFramework_NUnitAssemblyHooks
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void AssemblyCleanup()
     {
-        var currentAssembly = typeof(CSharpFramework_NUnitAssemblyHooks).Assembly;
+        var currentAssembly = typeof(SauceDemoTestProject_NUnitAssemblyHooks).Assembly;
 
         TestRunnerManager.OnTestRunEnd(currentAssembly);
     }

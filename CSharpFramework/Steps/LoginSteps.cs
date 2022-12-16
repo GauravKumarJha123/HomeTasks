@@ -1,17 +1,8 @@
 ﻿using CSharpFrameworkClassLib.Pages.PageObjects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TechTalk.SpecFlow;
-using UtilityLibrary.Utilities.PageUtility;
-using UtilityClassLib.Utilities.Selenium;
-using OpenQA.Selenium;
-using CSharpFramework.Utilities.Selenium;
 
 
-namespace CSharpFramework.Steps
+namespace UtilityClassLib.Steps
 {
     [Binding]
     public class LoginSteps 
@@ -32,7 +23,7 @@ namespace CSharpFramework.Steps
         [When(@"I Enter Password '([^']*)'")]
         public void WhenIEnterPassword(string pass)
         {
-            loginPage.UserPass(pass);
+            loginPage.UserPassword(pass);
         }
 
         [When(@"I Click on Login Button")]
@@ -44,7 +35,7 @@ namespace CSharpFramework.Steps
         [Then(@"I Navigate to Inventory Page Url")]
         public void ThenINavigateToInventoryPageUrl()
         {
-            loginPage.Verify();
+            loginPage.VerifyNavigationToInventoryPage();
             //var urlToValidate = Navigation.inventoryUrl.Contains(expectedUrl);
             //Assert.IsTrue(urlToValidate, " :: The actual page Url is different");
             //if (!urlToValidate) Console.WriteLine(" :: The actual page URL is " + urlToValidate);

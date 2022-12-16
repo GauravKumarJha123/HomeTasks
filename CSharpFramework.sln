@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpFramework", "CSharpFramework\CSharpFramework.csproj", "{2295EDBB-1B0C-4C48-84DF-EF99459CF5DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SauceDemoTestProject", "CSharpFramework\SauceDemoTestProject.csproj", "{2295EDBB-1B0C-4C48-84DF-EF99459CF5DE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpFrameworkClassLib", "CSharpFrameworkClassLib\CSharpFrameworkClassLib.csproj", "{AF098476-34E7-46F3-A577-0474FC74BEE4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SauceDemoPages", "CSharpFrameworkClassLib\SauceDemoPages.csproj", "{AF098476-34E7-46F3-A577-0474FC74BEE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtilityClassLib", "UtilityLibrary\UtilityClassLib.csproj", "{A6E75B7C-4E27-452E-AA68-FE66B9A1F835}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtilityClassLib", "UtilityLibrary\UtilityClassLib.csproj", "{A6E75B7C-4E27-452E-AA68-FE66B9A1F835}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

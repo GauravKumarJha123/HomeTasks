@@ -9516,9 +9516,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gaurav_Jha\\source\\repos\\CSharpFramework\\CSharpFrameworkClassLib\\CSharpFrameworkClassLib.csproj",
-      "projectName": "CSharpFrameworkClassLib",
-      "projectPath": "C:\\Users\\Gaurav_Jha\\source\\repos\\CSharpFramework\\CSharpFrameworkClassLib\\CSharpFrameworkClassLib.csproj",
+      "projectUniqueName": "C:\\Users\\Gaurav_Jha\\source\\repos\\CSharpFramework\\CSharpFrameworkClassLib\\SauceDemoPages.csproj",
+      "projectName": "SauceDemoPages",
+      "projectPath": "C:\\Users\\Gaurav_Jha\\source\\repos\\CSharpFramework\\CSharpFrameworkClassLib\\SauceDemoPages.csproj",
       "packagesPath": "C:\\Users\\Gaurav_Jha\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Gaurav_Jha\\source\\repos\\CSharpFramework\\CSharpFrameworkClassLib\\obj\\",
       "projectStyle": "PackageReference",

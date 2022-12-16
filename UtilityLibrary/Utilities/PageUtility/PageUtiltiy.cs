@@ -1,23 +1,12 @@
-﻿using CSharpFramework.Utilities.Selenium;
+﻿using UtilityClassLib.Utilities.Selenium;
 using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace UtilityLibrary.Utilities.PageUtility
 {
-    public class PageUtiltiy : DriverClass
-    { 
-        
-          public static IWebElement GetElement(By element)
-        {
-            return CurrentDriver.FindElement(element);
-        }     
+    public class PageUtiltiy : BasePage
+    {
         public static void NavigatWrapper(string url)
         {
-
             CurrentDriver.Navigate().GoToUrl(url);
         }
 
@@ -32,14 +21,34 @@ namespace UtilityLibrary.Utilities.PageUtility
         }
 
         public static IList<IWebElement> GetLists(By element)
-        {   // log.info
+        {
             return CurrentDriver.FindElements(element);
         }
+
         public static void SendKeysWrapper(By element, string text)
         {
-            
-         CurrentDriver.FindElement(element).SendKeys(text);
-            
+            CurrentDriver.FindElement(element).SendKeys(text);
         }
+
+        public static IWebElement GetElement(By element)
+        {
+            return CurrentDriver.FindElement(element);
+        }
+
+        public static By GetXpathUsingID(string value)
+        {
+            return By.XPath($"//*[@id=\"{value}\"]");
+        }
+
+        public static By GetXpathUsingDivClass(string value)
+        {
+            return By.XPath($"//div[@class='{value}']");
+        }
+
+        public static By GetByID(string value)
+        {
+            return By.Id($"{value}");
+        }
+
     }
 }

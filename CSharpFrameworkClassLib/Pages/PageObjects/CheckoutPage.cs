@@ -1,14 +1,7 @@
 ﻿using AventStack.ExtentReports;
-using CSharpFramework.Utilities.Selenium;
-using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Collections.Specialized;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UtilityClassLib.Report;
 using UtilityClassLib.Utilities.Selenium;
+using OpenQA.Selenium;
+using UtilityClassLib.Report;
 using UtilityLibrary.Utilities.PageUtility;
 
 namespace CSharpFrameworkClassLib.Pages.PageObjects
@@ -16,82 +9,64 @@ namespace CSharpFrameworkClassLib.Pages.PageObjects
     public class CheckoutPage : PageUtiltiy
     {
         #region Locators
-        By itemsTitle => By.XPath("//div[@class='inventory_item_name']");// IList<IwEbEleem
-        By itemsPrice => By.XPath("//div[@class='inventory_item_price']");// IList<IwEbEleem
-
-        By firstName => By.Id("first-name");
-
-        By lastName => By.Id("last-name");
-
-        By zipCode => By.XPath("//input[@id='postal-code']");
-
-        By continueBtn => By.XPath("//input[@id='continue']");
-
-        By finishBtn => By.XPath("//button[@id='finish']");// IList<IwEbEleem
-
-        //[FindsBy(How = How.XPath, Using = "//*[@id=\"checkout_summary_container\"]/div/div[2]/div[5]")]
-        //private IWebElement totalPrice;
-        //  --> price element 129.94
-
-
+        By ItemsTitle => GetXpathUsingDivClass("inventory_item_name");
+        By ItemsPrice => GetXpathUsingDivClass("inventory_item_price");
+        By FirstName => GetByID("first-name");
+        By LastName => GetByID("last-name");
+        By ZipCode => GetByID("postal-code");
+        By ContinueBtn => GetByID("continue");
+        By FinishBtn => GetByID("finish");
         #endregion
 
         #region locators
-        public void FirstName(string user)
+        public void EnterFirstName(string user)
         {
-            SendKeysWrapper(firstName, user);
-            extentReport.test = extentReport.report.CreateTest("Checkout Test").Info("Checkout Test Started");
-            extentReport.test.Log(Status.Info, "Logging was Sucess");
-            extentReport.test.Log(Status.Info, "Adding Product was Sucess");
-            extentReport.test.Log(Status.Info, "Navigated To Checkout Page");
-            extentReport.test.Log(Status.Info, "First Name is entered");
-
+            SendKeysWrapper(FirstName, user);
+            ExtentObj.Test = ExtentObj.Report.CreateTest("Checkout Test").Info("Checkout Test Started");
+            ExtentObj.Test.Log(Status.Info, "Logging was Sucess");
+            ExtentObj.Test.Log(Status.Info, "Adding Product was Sucess");
+            ExtentObj.Test.Log(Status.Info, "Navigated To Checkout Page");
+            ExtentObj.Test.Log(Status.Info, "First Name is entered");
         }
-        public void LastName(string lname)
+        public void EnterLastName(string lname)
         {
-            SendKeysWrapper(lastName, lname);
-            extentReport.test.Log(Status.Info, "Last Name is entered");
-
+            SendKeysWrapper(LastName, lname);
+            ExtentObj.Test.Log(Status.Info, "Last Name is entered");
         }
-        public void ZipCode(string code)
+        public void EnterZipCode(string code)
         {
-            SendKeysWrapper(zipCode, code);
-            extentReport.test.Log(Status.Info, "ZipCode Name is entered");
-
-
+            SendKeysWrapper(ZipCode, code);
+            ExtentObj.Test.Log(Status.Info, "ZipCode Name is entered");
         }
         public void ContinueButton()
         {
-            ClickWrapper(continueBtn);
-            extentReport.test.Log(Status.Info, "Continue Button is CLicked");
+            ClickWrapper(ContinueBtn);
+            ExtentObj.Test.Log(Status.Info, "Continue Button is CLicked");
 
         }
         public void FinishButton()
         {
-            ClickWrapper(finishBtn);
-            extentReport.test.Log(Status.Info, "Finish Button is CLicked");
+            ClickWrapper(FinishBtn);
+            ExtentObj.Test.Log(Status.Info, "Finish Button is CLicked");
             
         }
 
         public void VerifyFinishPage()
         {
-            if (DriverClass.CurrentDriver.Url.Equals(Navigation.finshPageUrl))
+            if (BasePage.CurrentDriver.Url.Equals(Navigation.finshPageUrl))
             {
-                if (extentReport.test.Status == Status.Pass)
+                if (ExtentObj.Test.Status == Status.Pass)
                 {
-                    extentReport.test.Log(Status.Pass, ExtentReport.captureScreenShot(DriverClass.CurrentDriver, "Checkout Test Passed"));
-                    
+                    ExtentObj.Test.Log(Status.Pass, ExtentReport.CaptureScreenShot(BasePage.CurrentDriver, "Checkout Test Passed"));
                 }
                 else
                 {
-                    extentReport.test.Log(Status.Fail, ExtentReport.captureScreenShot(DriverClass.CurrentDriver, "Checkout Failed"));
-                    
+                    ExtentObj.Test.Log(Status.Fail, ExtentReport.CaptureScreenShot(BasePage.CurrentDriver, "Checkout Failed"));
                 }
             }
             else
             {
-                extentReport.test.Log(Status.Fail, ExtentReport.captureScreenShot(DriverClass.CurrentDriver, "Checkout Failed"));
-                
+                ExtentObj.Test.Log(Status.Fail, ExtentReport.CaptureScreenShot(BasePage.CurrentDriver, "Checkout Failed"));
             }
         }
         #endregion
@@ -100,11 +75,11 @@ namespace CSharpFrameworkClassLib.Pages.PageObjects
         #region Methods
         public IList<IWebElement> getItemsTitle()
         {
-            return GetLists(itemsTitle);
+            return GetLists(ItemsTitle);
         }
         public IList<IWebElement> getItemsPrice()
         {
-            return GetLists(itemsPrice);
+            return GetLists(ItemsPrice);
         }
 
         #endregion

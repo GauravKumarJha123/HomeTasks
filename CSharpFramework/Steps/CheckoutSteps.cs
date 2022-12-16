@@ -1,14 +1,8 @@
-﻿using CSharpFramework.Utilities.Selenium;
+﻿using UtilityClassLib.Utilities.Selenium;
 using CSharpFrameworkClassLib.Pages.PageObjects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TechTalk.SpecFlow;
-using UtilityClassLib.Utilities.Selenium;
 
-namespace CSharpFramework.Steps
+namespace UtilityClassLib.Steps
 {
     [Binding]
     internal class CheckoutSteps
@@ -18,25 +12,25 @@ namespace CSharpFramework.Steps
         [Given(@"I Navigate To Cart Page and Click on Checkout Button")]
         public void GivenINavigateToCartPageAndClickOnCheckoutButton()
         {
-            Console.WriteLine(DriverClass.CurrentDriver.Url);
+            Console.WriteLine(BasePage.CurrentDriver.Url);
         }
 
         [Given(@"I Enter FirstName as '([^']*)'")]
         public void GivenIEnterFirstNameAs(string firstName)
         {
-            checkoutPage.FirstName(firstName);
+            checkoutPage.EnterFirstName(firstName);
         }
 
         [Given(@"I Enter LastName as '([^']*)'")]
         public void GivenIEnterLastNameAs(string lastName)
         {
-            checkoutPage.LastName(lastName);
+            checkoutPage.EnterLastName(lastName);
         }
 
         [Given(@"I Enter ZipCode as '([^']*)'")]
         public void GivenIEnterZipCodeAs(string zipCode)
         {
-            checkoutPage.ZipCode(zipCode);
+            checkoutPage.EnterZipCode(zipCode);
         }
 
 
@@ -49,7 +43,7 @@ namespace CSharpFramework.Steps
         [Then(@"Checkout is Intiated")]
         public void ThenCheckoutIsIntiated()
         {
-            Assert.IsTrue(DriverClass.CurrentDriver.Url.Equals(Navigation.checkoutUrl),
+            Assert.IsTrue(BasePage.CurrentDriver.Url.Equals(Navigation.checkoutUrl),
                 "We are not on Checkout Page");
 
         }

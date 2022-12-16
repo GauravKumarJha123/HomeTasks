@@ -1,15 +1,9 @@
 ﻿using AventStack.ExtentReports.Gherkin.Model;
-using CSharpFramework.Utilities.Selenium;
+using UtilityClassLib.Utilities.Selenium;
 using CSharpFrameworkClassLib.Pages.PageObjects;
-using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 
-namespace CSharpFramework.Steps
+namespace UtilityClassLib.Steps
 {
     [Binding]
     public class InventorySteps 
@@ -23,12 +17,12 @@ namespace CSharpFramework.Steps
         [Given(@"I am Logged in With Valid Credentials")]
         public void GivenIAmLoggedInWithValidCredentials()
         {
-            Console.WriteLine(DriverClass.CurrentDriver.Url);
+            Console.WriteLine(BasePage.CurrentDriver.Url);
         }
         [Given(@"I Navigated to Inventory Page")]
         public void GivenINavigatedToInventoryPage()
         {
-            Console.WriteLine(DriverClass.CurrentDriver.Url);
+            Console.WriteLine(BasePage.CurrentDriver.Url);
         }
 
         [When(@"I Added Items To Cart")]
@@ -51,7 +45,7 @@ namespace CSharpFramework.Steps
         [Then(@"Items are added to the cart")]
         public void ThenItemsAreAddedToTheCart()
         {
-            Console.WriteLine(DriverClass.CurrentDriver.Url);
+            Console.WriteLine(BasePage.CurrentDriver.Url);
         }
 
 

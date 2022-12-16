@@ -1,12 +1,6 @@
 ﻿using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using OpenQA.Selenium.Support.UI;
-using UtilityLibrary.Utilities.PageUtility;
-using CSharpFramework.Utilities.Selenium;
+using UtilityClassLib.Utilities.Selenium;
 
 namespace UtilityClassLib.ExtensionMethods
 {
@@ -14,7 +8,7 @@ namespace UtilityClassLib.ExtensionMethods
     public static class WebDriverExtensions
     {
 
-        private static IWebDriver _driver = DriverClass.CurrentDriver;       
+        private static IWebDriver _driver = BasePage.CurrentDriver;       
 
         public static void ClickByIndex(this By locator, int idx = 0)
         {
@@ -33,6 +27,7 @@ namespace UtilityClassLib.ExtensionMethods
                 }
                 catch (Exception e)
                 {
+                    Console.WriteLine(e.Message);
                     return false;
                 }
 

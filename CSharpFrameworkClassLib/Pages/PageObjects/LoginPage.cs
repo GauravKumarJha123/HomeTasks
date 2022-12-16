@@ -1,11 +1,10 @@
-﻿using CSharpFramework.Utilities.Selenium;
+﻿using UtilityClassLib.Utilities.Selenium;
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UtilityClassLib.Utilities.Selenium;
 using UtilityLibrary.Utilities.PageUtility;
 using AventStack.ExtentReports;
 using NUnit.Framework;
@@ -17,71 +16,62 @@ namespace CSharpFrameworkClassLib.Pages.PageObjects
     public class LoginPage : PageUtiltiy
     {
         #region Locators
-        private By userName => By.XPath("//*[@id=\"user-name\"]");
+        private By UserName => GetXpathUsingID("user-name");
 
-        private By userPass => By.XPath("//*[@id=\"password\"]");
+        private By UserPass => GetXpathUsingID("password");
 
-        private By loginBtn => By.XPath("//*[@id=\"login-button\"]");
+        private By LoginBtn => GetXpathUsingID("login-button");
         #endregion
 
-        #region Events
-        
-
-           
-
-            public void NavigateBaseUrl()
+        #region Actions
+        public void NavigateBaseUrl()
         {
             NavigatWrapper(Navigation.baseUrl);
             Maximize();
             Console.WriteLine(" :: The base URL is navigated to");
-            extentReport.test = extentReport.report.CreateTest("Login Test").Info("Login Test Started");
-            extentReport.test.Log(Status.Info, "Login Page is Launched");
+            ExtentObj.Test = ExtentObj.Report.CreateTest("Login Test").Info("Login Test Started");
+            ExtentObj.Test.Log(Status.Info, "Login Page is Launched");
         }
+
         public void EnterUserName(string user)
         {
-            SendKeysWrapper(userName , user);
-            extentReport.test.Log(Status.Info, "User Name " + user +" is Entered");
-
+            SendKeysWrapper(UserName, user);
+            ExtentObj.Test.Log(Status.Info, "User Name " + user + " is Entered");
         }
-        public void UserPass(string pass)
-        {
-            SendKeysWrapper(userPass, pass);
-            extentReport.test.Log(Status.Info, "User Password " + pass + " is Entered");
 
+        public void UserPassword(string pass)
+        {
+            SendKeysWrapper(UserPass, pass);
+            ExtentObj.Test.Log(Status.Info, "User Password " + pass + " is Entered");
         }
 
         public string GetUser()
         {
-           return GetElement(userName).Text;
+            return GetElement(UserName).Text;
         }
-        
+
         public void ClickLoginButton()
         {
-            ClickWrapper(loginBtn);
-            extentReport.test.Log(Status.Info, "Login Button is Clicked");
-
+            ClickWrapper(LoginBtn);
+            ExtentObj.Test.Log(Status.Info, "Login Button is Clicked");
         }
 
-        public bool VerifyNavigationToInventoryPage()
+        public bool VerifyUrl()
         {
-            return (DriverClass.CurrentDriver.Url.Equals(Navigation.inventoryUrl)) ? true : false;
+            return (BasePage.CurrentDriver.Url.Equals(Navigation.inventoryUrl)) ? true : false;
         }
 
-        public void Verify()
+        public void VerifyNavigationToInventoryPage()
         {
             DateTime time = DateTime.Now;
             String fileName = "Screenshot_" + time.ToString("h_mm_ss") + ".png";
-            if (VerifyNavigationToInventoryPage())
+            if (VerifyUrl())
             {
-                extentReport.test.Log(Status.Pass, ExtentReport.captureScreenShot(DriverClass.CurrentDriver, fileName));
+                ExtentObj.Test.Log(Status.Pass, ExtentReport.CaptureScreenShot(BasePage.CurrentDriver, fileName));
             }
-            else extentReport.test.Log(Status.Fail, ExtentReport.captureScreenShot(DriverClass.CurrentDriver, fileName));
+            else ExtentObj.Test.Log(Status.Fail, ExtentReport.CaptureScreenShot(BasePage.CurrentDriver, fileName));
         }
-        //public InventoryPage NavigateToInventoryPage()
-        //{
-        //    ClickLoginButton();
-        //    return new InventoryPage(CurrentDriver);
-        //}
+
         #endregion
     }
 }

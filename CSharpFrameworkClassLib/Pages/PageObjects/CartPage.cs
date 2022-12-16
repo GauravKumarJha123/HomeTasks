@@ -1,5 +1,5 @@
 ﻿using AventStack.ExtentReports;
-using CSharpFramework.Utilities.Selenium;
+using UtilityClassLib.Utilities.Selenium;
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
@@ -17,11 +17,11 @@ namespace CSharpFrameworkClassLib.Pages.PageObjects
         private InventoryPage inventoryPage = new InventoryPage();
         #region locators
 
-        By itemsPrice => By.XPath("//div[@class='inventory_item_price']");
+        By itemsPrice => GetXpathUsingDivClass("inventory_item_price");
 
-        By itemsTitle => By.XPath("//div[@class='inventory_item_name']");
+        By itemsTitle => GetXpathUsingDivClass("inventory_item_name");
 
-        By checkoutBtn => By.XPath("//button[@id='checkout']");
+        By checkoutBtn => GetByID("checkout");
         #endregion
 
         #region Elements
@@ -58,16 +58,16 @@ namespace CSharpFrameworkClassLib.Pages.PageObjects
 
         public void VerifyListofProducts()
         {
-            extentReport.test = extentReport.report.CreateTest("Cart Test").Info("Cart Test Started");
-            extentReport.test.Log(Status.Info, "Logging was Sucess");
-            extentReport.test.Log(Status.Info, "Adding Product was Sucess");
+            ExtentObj.Test = ExtentObj.Report.CreateTest("Cart Test").Info("Cart Test Started");
+            ExtentObj.Test.Log(Status.Info, "Logging was Sucess");
+            ExtentObj.Test.Log(Status.Info, "Adding Product was Sucess");
             if (VerifyItemsAreCorrect())
             {
-                extentReport.test.Log(Status.Pass, ExtentReport.captureScreenShot(DriverClass.CurrentDriver, "Same Product are in Cart Page"));
+                ExtentObj.Test.Log(Status.Pass, ExtentReport.CaptureScreenShot(BasePage.CurrentDriver, "Same Product are in Cart Page"));
                 
             }
             else{
-                extentReport.test.Log(Status.Fail, ExtentReport.captureScreenShot(DriverClass.CurrentDriver, "Same Product was not there in Cart Page"));
+                ExtentObj.Test.Log(Status.Fail, ExtentReport.CaptureScreenShot(BasePage.CurrentDriver, "Same Product was not there in Cart Page"));
                 
             }
         }
