@@ -10,13 +10,13 @@ namespace OrangeHRMPages.Pages.Admin
 {
     public class AddUserPage : BasePage
     {
-        private By UserRoleXpath => By.XPath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[1]/div/div[2]/div/div/div[1]");
+        private By UserRoleXpath => By.XPath("(//div[contains(text(),'-- Select --')])[1]");
 
-        private By StatusXpath => By.XPath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[3]/div/div[2]/div/div/div[1]");
+        private By StatusXpath => By.XPath("(//div[contains(text(),'-- Select --')])");
         
         private By EmployeeNameXpath => By.XPath("//input[@placeholder='Type for hints...']");
 
-        private By UserNameXpath => By.XPath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[4]/div/div[2]/input");
+        private By UserNameXpath => By.XPath("(//input[@class='oxd-input oxd-input--active'])[2]");
 
         private By PasswordFields => By.XPath("//input[@type='password']");
 
@@ -28,7 +28,7 @@ namespace OrangeHRMPages.Pages.Admin
         public void SelectUserRole()
         {
             IWebElement el = UserRoleXpath.WdFindElement();
-            el.WeElementIsEnabled();
+            //el.WeElementIsEnabled();
             el.WeClick();
             listBox.WdDropdwonByText(AdminUser);
         }
@@ -36,7 +36,7 @@ namespace OrangeHRMPages.Pages.Admin
         public void SelectStatus()
         {
             IWebElement el = StatusXpath.WdFindElement();
-            el.WeElementIsEnabled();
+            //el.WeElementIsEnabled();
             el.WeClick();
             listBox.WdDropdwonByText(StatusEnabled);
         }

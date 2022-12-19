@@ -13,7 +13,7 @@ namespace OrangeHRMPages.Pages.Admin
         public AddUserPage addUserPage { get; set; } = new AddUserPage();
 
         public SearchUserPage searchUserPage { get; set; } = new SearchUserPage();
-        private By AdminTab => By.XPath("//*[@id=\"app\"]/div[1]/div[1]/aside/nav/div[2]/ul/li[1]/a");
+        private By AdminTab => By.XPath("//span[text()='Admin']");
 
         //a[@class='oxd-main-menu-item active']
 

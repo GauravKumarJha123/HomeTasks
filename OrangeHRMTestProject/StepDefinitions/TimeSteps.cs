@@ -39,7 +39,7 @@ namespace OrangeHRMTestProject.StepDefinitions
         {
             if (timePage.VerifyEmployeeTimesheet())
             {
-                Assert.Pass();
+                Assert.Pass("TimeSheet Step done");
             }
             else
             {

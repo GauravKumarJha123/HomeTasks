@@ -12,23 +12,15 @@ namespace OrangeHRMPages.Pages.Recruitment
     {
         private string firstName = "Gaurav";
         private string lastName = "Jha";
-        private string name = firstName + " " + lastName;
-
-        private By RecruitmentTabXpath => By.XPath("//span[contains(text(),'Recruitment')]");
-
+        private By RecruitmentTabXpath => By.XPath("//span[text()='Recruitment']");
         private By FirstNameXpath => By.XPath("//input[@name='firstName']");
-
         private By LastNameXpath => By.XPath("//input[@name='lastName']");
-
-        private By EmailXpath => By.XPath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[3]/div/div[1]/div/div[2]/input");
-
-        private By NameConfirmXpath => By.XPath($"//div[contains(text(),'{name}')]");
-
-        private string firstName = "Gaurav";
-        private string lastName = "Jha";
-        private string name = firstName + " " + lastName;
+        private By EmailXpath => By.XPath("(//input[@class='oxd-input oxd-input--active'])[2]");
+        private By NameConfirmXpath => By.XPath($"//div[contains(text(),'{firstName}')]");
+        private By RequiredFiledXpath => By.XPath("//span[contains(string(),'Required')]");
         public void ClickOnRecruitmentTab()
         {
+            RecruitmentTabXpath.WdFindElement();
             RecruitmentTabXpath.WdHighlight();
             RecruitmentTabXpath.WdClick();
         }
@@ -41,7 +33,7 @@ namespace OrangeHRMPages.Pages.Recruitment
         public void EnterLastName()
         {
             IWebElement element = LastNameXpath.WdFindElement();
-            element.WeSendKeys(name);
+            element.WeSendKeys(lastName);
         }
 
         public void EnterEmailId()
@@ -50,17 +42,17 @@ namespace OrangeHRMPages.Pages.Recruitment
             element.WeSendKeys("xyz@email.com");
         }
 
-        public void VerifyTheName()
+        public bool VerifyTheName()
         {
-            IWebElement nameElement = FirstNameXpath.WdFindElement();
-            if (nameElement.Text.ToString().Contains(name))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            IWebElement nameElement = NameConfirmXpath.WdFindElement();
+            Console.WriteLine(nameElement.Text);
+            return (nameElement.Text.ToString().Contains(firstName));
+        }
+
+        public bool VerifyRequiredField()
+        {
+            IWebElement el = RequiredFiledXpath.WdFindElement();
+            return el.WeElementIsDisplayed();
         }
     }
 }

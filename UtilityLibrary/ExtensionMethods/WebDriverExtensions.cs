@@ -3,6 +3,7 @@ using OpenQA.Selenium;
 using UtilityLibrary.Selenium;
 using static UtilityLibrary.Selenium.Navigation;// for staitic Fields
 using System.Runtime.CompilerServices;
+using OpenQA.Selenium.Interactions;
 
 namespace UtilityLibrary.ExtensionMethods
 {
@@ -17,7 +18,7 @@ namespace UtilityLibrary.ExtensionMethods
             return js.ExecuteScript(weHighlightedColour, myLocator);
         }
         
-        public static IWebElement WdFindElement(this By locator, int sec = 30)
+        public static IWebElement WdFindElement(this By locator, int sec = 60)
         {
             var wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(sec));
             return wait.Until(drv =>
@@ -42,10 +43,15 @@ namespace UtilityLibrary.ExtensionMethods
             return arr;
         }
 
-        public static void WdSendKeys(this By locator, string text, int sec = 30, bool clearFirst = false)
+        public static void WdSendKeys(this By locator, string text, int sec = 30, bool clearFirst = true)
         {
             if (clearFirst) locator.WdFindElement(sec).Clear();
             locator.WdFindElement(sec).SendKeys(text);
+        }
+        public static void WdSendKeysClear(this By element, string text)
+        {
+            Actions actions = new Actions(Driver.driver);
+            actions.MoveToElement(Driver.driver.FindElement(element)).DoubleClick().Click().SendKeys(Keys.Backspace).SendKeys(text).SendKeys(Keys.Tab).Build().Perform();
         }
 
         public static void WdClickByIndex(this By locator, int index, int sec = 10)

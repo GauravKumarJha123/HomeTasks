@@ -12,7 +12,7 @@ namespace OrangeHRMTestProject.Hooks
     [Binding]
     internal static class SpecFlowHooks
     {
-        [Before]
+        [BeforeScenario]
         [Scope(Tag = "Chrome")]
         internal static void StartChromeDriver()
         {
@@ -23,7 +23,8 @@ namespace OrangeHRMTestProject.Hooks
         [BeforeScenario("Admin01")]
         [BeforeScenario("Leave")]
         [BeforeScenario("TimeSheet")]
-
+        [BeforeScenario("Recruitment")]
+        [BeforeScenario("Recruitment01")]
         internal static void StartAdminPage()
         {
             LoginPage loginPage = new LoginPage();
@@ -41,6 +42,7 @@ namespace OrangeHRMTestProject.Hooks
         }
 
         [After]
+        [Scope(Tag = "Chrome")]
         internal static void StopWebDriver()
         {
             Driver.driver.Quit();
