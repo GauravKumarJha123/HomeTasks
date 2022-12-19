@@ -19,6 +19,7 @@ C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\OrangeHRMTestProject\bin\Debug\n
 C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\OrangeHRMTestProject\bin\Debug\net6.0\OrangeHRMTestProject.pdb
 C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\OrangeHRMTestProject\bin\Debug\net6.0\AngleSharp.dll
 C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\OrangeHRMTestProject\bin\Debug\net6.0\BoDi.dll
+C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\OrangeHRMTestProject\bin\Debug\net6.0\SeleniumExtras.WaitHelpers.dll
 C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\OrangeHRMTestProject\bin\Debug\net6.0\Dynamitey.dll
 C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\OrangeHRMTestProject\bin\Debug\net6.0\FluentAssertions.dll
 C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\OrangeHRMTestProject\bin\Debug\net6.0\Gherkin.dll
@@ -125,4 +126,3 @@ C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\OrangeHRMTestProject\obj\Debug\n
 C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\OrangeHRMTestProject\obj\Debug\net6.0\OrangeHRMTestProject.pdb
 C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\OrangeHRMTestProject\obj\Debug\net6.0\OrangeHRMTestProject.genruntimeconfig.cache
 C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\OrangeHRMTestProject\obj\Debug\net6.0\ref\OrangeHRMTestProject.dll
-C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\OrangeHRMTestProject\bin\Debug\net6.0\SeleniumExtras.WaitHelpers.dll

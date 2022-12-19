@@ -22,29 +22,30 @@ namespace OrangeHRMPages
         //div[@class='oxd-table']
         public void ClickonAddUserButton()
         {
-            ClickWrapper(AddUsers);
+            AddUsers.WdClick();
         }
 
         public void ClickonSearchUserButton()
         {
-            ClickWrapper(SearchUser);
+            SearchUser.WdClick();
         }
 
         public void ClickonResetUsersButton()
         {
-            ClickWrapper(ResetUsers);
+            ResetUsers.WdClick();
         }
 
         public IEnumerable<IWebElement> UserData()
         {
-            return GetUserRecords(TableXpath);  
+            return GetUserRecords(TableXpath);
         }
-
-        public IWebElement UserNamesByIdx(int idx) {
-
+        
+        public IWebElement UserNamesByIdx(int idx)
+        {
             Thread.Sleep(5000);
-
             return driver.FindElements(UserNamesXpath).ElementAt(idx);
         }
+
+        
     }
 }

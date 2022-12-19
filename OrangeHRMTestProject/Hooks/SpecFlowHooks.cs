@@ -22,6 +22,8 @@ namespace OrangeHRMTestProject.Hooks
         [BeforeScenario("Admin")]
         [BeforeScenario("Admin01")]
         [BeforeScenario("Leave")]
+        [BeforeScenario("TimeSheet")]
+
         internal static void StartAdminPage()
         {
             LoginPage loginPage = new LoginPage();

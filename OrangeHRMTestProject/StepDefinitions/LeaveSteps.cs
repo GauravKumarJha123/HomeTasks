@@ -31,8 +31,8 @@ namespace OrangeHRMTestProject.StepDefinitions
         public void WhenIClickOnSearchButton()
         {
             leavePage.ClickonSearchUserButton();
-
         }
+
         [Then(@"I get the User")]
         public void ThenIGetTheUser()
         {
