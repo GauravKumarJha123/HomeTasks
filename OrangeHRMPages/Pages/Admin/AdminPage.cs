@@ -19,7 +19,7 @@ namespace OrangeHRMPages.Pages.Admin
 
         public void ClickOnAdminTab()
         {
-            ClickWrapper(AdminTab);
+            AdminTab.WdClick();
         }
 
         

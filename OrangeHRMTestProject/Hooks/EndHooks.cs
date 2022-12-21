@@ -8,7 +8,7 @@ namespace OrangeHRMTestProject.Hooks
         
         internal static void AfterTestRun()
         {
-            Driver.driver.Quit();
+            DriverManager.driver.Quit();
         }
     }
 }

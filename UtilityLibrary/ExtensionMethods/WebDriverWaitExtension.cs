@@ -8,13 +8,13 @@ namespace UtilityLibrary.ExtensionMethods
         static WebDriverWait wait;
         public static WebDriverWait LongerWait(this WebDriverWait webDriverWait)
         {
-            wait = new WebDriverWait(Driver.driver, TimeSpan.FromSeconds(30));
+            wait = new WebDriverWait(DriverManager.driver, TimeSpan.FromSeconds(30));
             return wait;
         }
 
         public static WebDriverWait ShorterWait(this WebDriverWait webDriverWait)
         {
-            wait = new WebDriverWait(Driver.driver, TimeSpan.FromSeconds(15));
+            wait = new WebDriverWait(DriverManager.driver, TimeSpan.FromSeconds(15));
             return wait;
         }
     }

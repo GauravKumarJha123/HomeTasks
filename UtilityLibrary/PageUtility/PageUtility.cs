@@ -5,14 +5,13 @@ using UtilityLibrary.ExtensionMethods;
 
 namespace UtilityLibrary.PageUtility
 {
-    public class PageUtility : Driver
+    public class PageUtility : DriverManager
     {
 
         public static void NavigatWrapper(string url)
         {
             driver.Navigate().GoToUrl(url);
             Maximize();
-           // ClearCookie();
         }
 
         public static void ClickWrapper(By element)
@@ -34,7 +33,7 @@ namespace UtilityLibrary.PageUtility
         }
         public static void SendKeysWrapper(By element, string text)
         {
-            element.WdSendKeys(text);
+            element.SendKeysExtension(text);
         }
 
         public void DropDownWrapper(By element)
@@ -47,10 +46,6 @@ namespace UtilityLibrary.PageUtility
             return driver.FindElement(element);
         }
 
-        public static IWebElement weFindElement(By element)
-        {
-           return driver.FindElement(element);
-        }
         public static IWebElement WeFindElementByidx(By element , int idx)
         {
            return driver.FindElements(element).ElementAt(idx);

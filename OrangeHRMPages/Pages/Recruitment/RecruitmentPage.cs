@@ -20,38 +20,38 @@ namespace OrangeHRMPages.Pages.Recruitment
         private By RequiredFiledXpath => By.XPath("//span[contains(string(),'Required')]");
         public void ClickOnRecruitmentTab()
         {
-            RecruitmentTabXpath.WdFindElement();
+            RecruitmentTabXpath.FindElementExtension();
             RecruitmentTabXpath.WdHighlight();
             RecruitmentTabXpath.WdClick();
         }
 
         public void EnterFirstName()
         {
-            IWebElement element = FirstNameXpath.WdFindElement();
+            IWebElement element = FirstNameXpath.FindElementExtension();
             element.WeSendKeys(firstName);
         }
         public void EnterLastName()
         {
-            IWebElement element = LastNameXpath.WdFindElement();
+            IWebElement element = LastNameXpath.FindElementExtension();
             element.WeSendKeys(lastName);
         }
 
         public void EnterEmailId()
         {
-            IWebElement element = EmailXpath.WdFindElement();
+            IWebElement element = EmailXpath.FindElementExtension();
             element.WeSendKeys("xyz@email.com");
         }
 
         public bool VerifyTheName()
         {
-            IWebElement nameElement = NameConfirmXpath.WdFindElement();
+            IWebElement nameElement = NameConfirmXpath.FindElementExtension();
             Console.WriteLine(nameElement.Text);
             return (nameElement.Text.ToString().Contains(firstName));
         }
 
         public bool VerifyRequiredField()
         {
-            IWebElement el = RequiredFiledXpath.WdFindElement();
+            IWebElement el = RequiredFiledXpath.FindElementExtension();
             return el.WeElementIsDisplayed();
         }
     }

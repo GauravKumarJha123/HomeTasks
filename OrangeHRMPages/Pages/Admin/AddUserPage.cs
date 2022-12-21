@@ -27,29 +27,29 @@ namespace OrangeHRMPages.Pages.Admin
         private readonly IWebDriver _driver = driver;
         public void SelectUserRole()
         {
-            IWebElement el = UserRoleXpath.WdFindElement();
+            IWebElement el = UserRoleXpath.FindElementExtension();
             //el.WeElementIsEnabled();
             el.WeClick();
-            listBox.WdDropdwonByText(AdminUser);
+            listBox.DropdwonByText(AdminUser);
         }
 
         public void SelectStatus()
         {
-            IWebElement el = StatusXpath.WdFindElement();
+            IWebElement el = StatusXpath.FindElementExtension();
             //el.WeElementIsEnabled();
             el.WeClick();
-            listBox.WdDropdwonByText(StatusEnabled);
+            listBox.DropdwonByText(StatusEnabled);
         }
 
         public void SelectEmployeeName()
         {
-            SendKeysWrapper(EmployeeNameXpath,EmployeeName);
-            listBox.WdDropdwonByContainsText();
+            EmployeeNameXpath.SendKeysExtension(EmployeeName);
+            listBox.DropdwonByContainsText();
         }
 
         public void EnterUserName()
         {
-            UserNameXpath.WdSendKeys(UserName);
+            UserNameXpath.SendKeysExtension(UserName);
         }
 
         public void EnterUserPassword()
@@ -68,7 +68,9 @@ namespace OrangeHRMPages.Pages.Admin
 
         public void ClickOnSubmitButton()
         {
-           SubmitButton.WdClick();
+            //SubmitButton.FindElementExtension();
+            //SubmitButton.WdHighlight();
+            ClickonSearchUserButton();
         }
     }
 }

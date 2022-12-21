@@ -1,3 +1,8 @@
+C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\OrangeHRMTestProject\obj\Debug\net6.0\OrangeHRMTestProject.csproj.AssemblyReference.cache
+C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\OrangeHRMTestProject\obj\Debug\net6.0\OrangeHRMTestProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\OrangeHRMTestProject\obj\Debug\net6.0\OrangeHRMTestProject.AssemblyInfoInputs.cache
+C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\OrangeHRMTestProject\obj\Debug\net6.0\OrangeHRMTestProject.AssemblyInfo.cs
+C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\OrangeHRMTestProject\obj\Debug\net6.0\OrangeHRMTestProject.csproj.CoreCompileInputs.cache
 C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\OrangeHRMTestProject\bin\Debug\net6.0\LivingDoc.Dtos.dll
 C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\OrangeHRMTestProject\bin\Debug\net6.0\LivingDoc.SpecFlowPlugin.dll
 C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\OrangeHRMTestProject\bin\Debug\net6.0\TechTalk.SpecFlow.NUnit.SpecFlowPlugin.dll
@@ -115,11 +120,6 @@ C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\OrangeHRMTestProject\bin\Debug\n
 C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\OrangeHRMTestProject\bin\Debug\net6.0\UtilityLibrary.dll
 C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\OrangeHRMTestProject\bin\Debug\net6.0\OrangeHRMPages.pdb
 C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\OrangeHRMTestProject\bin\Debug\net6.0\UtilityLibrary.pdb
-C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\OrangeHRMTestProject\obj\Debug\net6.0\OrangeHRMTestProject.csproj.AssemblyReference.cache
-C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\OrangeHRMTestProject\obj\Debug\net6.0\OrangeHRMTestProject.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\OrangeHRMTestProject\obj\Debug\net6.0\OrangeHRMTestProject.AssemblyInfoInputs.cache
-C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\OrangeHRMTestProject\obj\Debug\net6.0\OrangeHRMTestProject.AssemblyInfo.cs
-C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\OrangeHRMTestProject\obj\Debug\net6.0\OrangeHRMTestProject.csproj.CoreCompileInputs.cache
 C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\OrangeHRMTestProject\obj\Debug\net6.0\OrangeHRMTestProject.csproj.CopyComplete
 C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\OrangeHRMTestProject\obj\Debug\net6.0\OrangeHRMTestProject.dll
 C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\OrangeHRMTestProject\obj\Debug\net6.0\refint\OrangeHRMTestProject.dll

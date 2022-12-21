@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using TechTalk.SpecFlow;
+using UtilityLibrary.ExtensionMethods;
 using UtilityLibrary.PageUtility;
 using static UtilityLibrary.Selenium.Navigation;
 //using static UtilityLibrary.Selenium.BasePage;
@@ -21,7 +22,6 @@ namespace OrangeHRMPages.Pages
         {
             try
             {
-                //BasePage.Driver
                 if (!driver.Url.Equals(DashboardUrl))
                 {
                     throw new Exception("Login Not Sucessfull");
@@ -30,18 +30,18 @@ namespace OrangeHRMPages.Pages
             {
                 Console.WriteLine(ex.Message);
             }
-
-
         }
         public void EnterCredentials(string username, string password)
         {
-            SendKeysWrapper(UserName, username);
-            SendKeysWrapper(UserPassword, password);
+            //UserName.WdHighlight();
+            UserName.SendKeysExtension(username);
+            //UserPassword.WdHighlight();
+            UserPassword.SendKeysExtension(password);
         }
 
         public void ClickonLoginButton()
         {
-            ClickWrapper(LoginButton);
+            ClickonSearchUserButton();
         }
 
         public void EnterCredentialsUsingTable(Table table, IEnumerable<dynamic> credentials)

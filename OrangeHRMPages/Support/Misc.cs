@@ -18,7 +18,7 @@ namespace OrangeHRMPages.Support
         #endregion
         #region User Credentials
         public static string EmployeeName = "John";
-        public static string UserName = "Gaurav786";
+        public static string UserName = "Gaurav990";
         public static string Password = "Password@123";
         #endregion
     }

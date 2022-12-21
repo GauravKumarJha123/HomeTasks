@@ -11,6 +11,7 @@
           "DotNetSeleniumExtras.WaitHelpers": "3.11.0",
           "Selenium.Support": "4.7.0",
           "Selenium.WebDriver": "4.7.0",
+          "SeleniumExtras.WaitHelpers": "1.0.2",
           "WebDriverManager": "2.16.2"
         },
         "runtime": {
@@ -75,6 +76,11 @@
             "assemblyVersion": "4.0.0.0",
             "fileVersion": "4.0.0.0"
           }
+        }
+      },
+      "SeleniumExtras.WaitHelpers/1.0.2": {
+        "dependencies": {
+          "Selenium.WebDriver": "4.7.0"
         }
       },
       "SharpZipLib/1.4.1": {
@@ -168,6 +174,13 @@
       "sha512": "sha512-WNGX6JxjBS5f79PQnrB4oO+5U83f8tZfND+rqX2YJVHPdv3xS/zZwljWqGu5UDhluo3kEuuT+DuGEZW8/+9fOA==",
       "path": "selenium.webdriver/4.7.0",
       "hashPath": "selenium.webdriver.4.7.0.nupkg.sha512"
+    },
+    "SeleniumExtras.WaitHelpers/1.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-de7m30nkZZLkfCncYBdluUpM27AR/Vkk4kiA4HRQbV+fZI3ps4qGIeJCuj8TAMXdMfQik5Rno8xPnFBIod+ebg==",
+      "path": "seleniumextras.waithelpers/1.0.2",
+      "hashPath": "seleniumextras.waithelpers.1.0.2.nupkg.sha512"
     },
     "SharpZipLib/1.4.1": {
       "type": "package",

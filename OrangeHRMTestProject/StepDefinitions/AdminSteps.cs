@@ -6,6 +6,8 @@ using OrangeHRMPages.Pages.Admin;
 using TechTalk.SpecFlow;
 using UtilityLibrary.Selenium;
 using UtilityLibrary.ExtensionMethods;
+using OpenQA.Selenium.Support.UI;
+using SeleniumExtras.WaitHelpers;
 
 namespace OrangeHRMTestProject.StepDefinitions
 {
@@ -29,38 +31,90 @@ namespace OrangeHRMTestProject.StepDefinitions
         [When(@"I Click on Add Button")]
         public void WhenIClickOnAddButton()
         {
+            //correction
             adminPage.addUserPage.ClickonAddUserButton();
         }
 
-        [When(@"I Enter User Details")]
-        public void WhenIEnterUserDetails()
+        
+        [When(@"I Select User Role")]
+        public void WhenISelectUserRole()
         {
             try
             {
                 adminPage.addUserPage.SelectUserRole();
-                adminPage.addUserPage.SelectStatus();
-                adminPage.addUserPage.SelectEmployeeName();
-                adminPage.addUserPage.EnterUserName();
-                adminPage.addUserPage.EnterUserPassword();
-                adminPage.addUserPage.EnterPasswordAgain();
-                
+
             }
             catch (Exception ex) { Console.WriteLine(ex.Message); }
         }
+
+        [When(@"I Select User Status")]
+        public void WhenISelectUserStatus()
+        {
+            try
+            {
+                
+                adminPage.addUserPage.SelectStatus();
+
+            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
+        }
+
+        [When(@"I Select Employee Name")]
+        public void WhenISelectEmployeeName()
+        {
+            try
+            {
+                
+                adminPage.addUserPage.SelectEmployeeName();
+
+            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
+        }
+
+        [When(@"I Select User Name")]
+        public void WhenISelectUserName()
+        {
+            try
+            {
+                adminPage.addUserPage.EnterUserName();
+            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
+        }
+
+        [When(@"I Select User Password")]
+        public void WhenISelectUserPassword()
+        {
+            try
+            {
+                adminPage.addUserPage.EnterUserPassword();
+            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
+        }
+
+        [When(@"I Enter Password Again")]
+        public void WhenIEnterPasswordAgain()
+        {
+            try
+            {
+                adminPage.addUserPage.EnterPasswordAgain();
+            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
+        }
+
+
+
+
         [When(@"I Click on Save Button")]
         public void WhenIClickOnSaveButton()
         {
-            Thread.Sleep(2000);
               adminPage.addUserPage.ClickOnSubmitButton();
-            Thread.Sleep(6000);
-
         }
 
         [Then(@"User is Added")]
         public void ThenUserIsAdded()
         {
-            Console.WriteLine(Driver.driver.Url.ToString());
-            Assert.IsTrue(!Driver.driver.Url.Equals(Navigation.AddUserPage) , "User Not added");
+            DriverManager.driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+            Assert.IsTrue(!DriverManager.driver.Url.Equals(Navigation.AddUserPage) , "User Not added");
         }
 
         #region Scneario 2
@@ -69,30 +123,25 @@ namespace OrangeHRMTestProject.StepDefinitions
         [When(@"I Fetch The records")]
         public void WhenIFetchTheRecords()
         {
-            //Thread.Sleep(5000);
             element = adminPage.UserNamesByIdx(0);
         }
 
         [When(@"I Enter User Details in Search Fields")]
         public void WhenIEnterUserDetailsInSearchFields()
         {
-            //Thread.Sleep(5000);
-
             adminPage.searchUserPage.EnterUserName(element.Text);
         }
 
         [When(@"I cllick on Search Button")]
         public void WhenICllickOnSearchButton()
         {
-            //Thread.Sleep(5000);
-
             adminPage.ClickonSearchUserButton();
         }
 
         [Then(@"I Should Get the Users Value")]
         public void ThenIShouldGetTheUsersValue()
         {
-            //Thread.Sleep(4000);
+            
             element = adminPage.UserNamesByIdx(0);
             element.WeElementIsDisplayed();
         }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6oxySeDDUezf0kzo5q8wIwHy+1dh/oXt+Ltwo2JhQ7m7lqwGkNz/isJNQfjH4VvESzFOkrV+8uZoR/ZivlaU1w==",
+  "dgSpecHash": "o5AdGlKXUtaYol50kJ0Uhg5oWeHtGtN2kPw4SYkPKC74XO0G4hM4Kqzv84PZG6nqq5QVYaRrwn4psszUuPiq6Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\Gaurav_Jha\\source\\repos\\OrangeHRMPages\\OrangeHRMTestProject\\OrangeHRMTestProject.csproj",
   "expectedPackageFiles": [
@@ -42,6 +42,7 @@
     "C:\\Users\\Gaurav_Jha\\.nuget\\packages\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
     "C:\\Users\\Gaurav_Jha\\.nuget\\packages\\selenium.support\\4.7.0\\selenium.support.4.7.0.nupkg.sha512",
     "C:\\Users\\Gaurav_Jha\\.nuget\\packages\\selenium.webdriver\\4.7.0\\selenium.webdriver.4.7.0.nupkg.sha512",
+    "C:\\Users\\Gaurav_Jha\\.nuget\\packages\\seleniumextras.waithelpers\\1.0.2\\seleniumextras.waithelpers.1.0.2.nupkg.sha512",
     "C:\\Users\\Gaurav_Jha\\.nuget\\packages\\sharpziplib\\1.4.1\\sharpziplib.1.4.1.nupkg.sha512",
     "C:\\Users\\Gaurav_Jha\\.nuget\\packages\\specflow\\3.9.40\\specflow.3.9.40.nupkg.sha512",
     "C:\\Users\\Gaurav_Jha\\.nuget\\packages\\specflow.assist.dynamic\\1.4.2\\specflow.assist.dynamic.1.4.2.nupkg.sha512",

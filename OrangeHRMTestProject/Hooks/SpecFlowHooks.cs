@@ -14,10 +14,14 @@ namespace OrangeHRMTestProject.Hooks
     {
         [BeforeScenario]
         [Scope(Tag = "Chrome")]
+
         internal static void StartChromeDriver()
         {
-            Driver.InitChrome();
+            DriverManager.InitChrome();
+
         }
+
+
 
         [BeforeScenario("Admin")]
         [BeforeScenario("Admin01")]
@@ -25,7 +29,7 @@ namespace OrangeHRMTestProject.Hooks
         [BeforeScenario("TimeSheet")]
         [BeforeScenario("Recruitment")]
         [BeforeScenario("Recruitment01")]
-        internal static void StartAdminPage()
+        internal static void StartLoginPage()
         {
             LoginPage loginPage = new LoginPage();
             loginPage.NavigateToLoginPage();
@@ -34,18 +38,20 @@ namespace OrangeHRMTestProject.Hooks
             loginPage.LoginConfirmation();
         }
 
-        [Before]
+
+        [BeforeScenario]
         [Scope(Tag = "Firefox")]
         internal static void StartFirefoxDriver()
         {
-            Driver.InitFirefox();
+            DriverManager.InitFirefox();
         }
 
         [After]
         [Scope(Tag = "Chrome")]
+        [Scope(Tag = "Firefox")]
         internal static void StopWebDriver()
         {
-            Driver.driver.Quit();
+            DriverManager.driver.Quit();
         }
     }
 }

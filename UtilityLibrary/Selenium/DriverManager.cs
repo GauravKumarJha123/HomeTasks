@@ -6,9 +6,11 @@ using UtilityLibrary.Selenium;
 
 namespace UtilityLibrary.Selenium
 {
-    public class Driver
+    public class DriverManager
     {
         public static WebDriverWait wait;
+
+
         [ThreadStatic]
         public static IWebDriver driver;
 

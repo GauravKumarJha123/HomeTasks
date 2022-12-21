@@ -8,7 +8,7 @@ namespace OrangeHRMTestProject.StepDefinitions
     public sealed class TimeSteps
     {
         TimePage timePage = new TimePage();
-        
+
         [When(@"I Click on Time Tab")]
         public void WhenIClickOnTimeTab()
         {
@@ -37,13 +37,20 @@ namespace OrangeHRMTestProject.StepDefinitions
         [Then(@"I Should Get The Timesheet of Employee")]
         public void ThenIShouldGetTheTimesheetOfEmployee()
         {
-            if (timePage.VerifyEmployeeTimesheet())
+            try
             {
-                Assert.Pass("TimeSheet Step done");
-            }
-            else
+                if (timePage.VerifyEmployeeTimesheet())
+                {
+                    Assert.Pass("TimeSheet Step done");
+                }
+
+                else
+                {
+                    throw new Exception("No time sheet Found");
+                }
+            }catch(Exception ex)
             {
-                Assert.Fail("No TimeSheet Fouund for given Employee");
+                Console.WriteLine(ex.Message);
             }
         }
     }

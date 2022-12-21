@@ -12,7 +12,7 @@ namespace UtilityLibrary.ExtensionMethods
 {
     public static class WebElementExtensions
     {
-        private static IWebDriver _driver = Driver.driver;
+        private static IWebDriver _driver = DriverManager.driver;
 
         public static void WeHighlightElement(this IWebElement element)
         {

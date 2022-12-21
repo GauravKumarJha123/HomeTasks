@@ -11,7 +11,7 @@ namespace UtilityLibrary.ExtensionMethods
     {
         public static void Implicitwait(int sec = 30)
         {
-            Driver.driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(sec);
+            DriverManager.driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(sec);
         }
         public static TimeSpan SmallWait
         {

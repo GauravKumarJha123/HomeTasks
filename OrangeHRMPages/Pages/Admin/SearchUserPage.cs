@@ -12,7 +12,7 @@ namespace OrangeHRMPages.Pages.Admin
         public void EnterUserName(string text)
         {
             
-            UserNameXpath.WdSendKeys(text);
+            UserNameXpath.SendKeysExtension(text);
         }
     }
 }

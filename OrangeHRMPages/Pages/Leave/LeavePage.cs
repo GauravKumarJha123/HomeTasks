@@ -17,14 +17,14 @@ namespace OrangeHRMPages.Pages.Leave
 
         public void ClickOnLeaveTab()
         {
-
+            LeaveTab.WdHighlight();
             LeaveTab.WdClick();
         }
 
         public void GetDates()
         {
-            
-            IWebElement el = DateXpath.WdFindElement();
+            DateXpath.WdHighlight();
+            IWebElement el = DateXpath.FindElementExtension();
             string[] arr = DateXpath.SplitString();
             if (arr.Length > 1)
             {
@@ -41,19 +41,17 @@ namespace OrangeHRMPages.Pages.Leave
 
         public void EnterDates()
         {
-            bool clear = true;
             FromDateXpath.WdHighlight();
-            FromDateXpath.WdSendKeysClear(fromDate);
-            Thread.Sleep(5000);
+            FromDateXpath.SendKeysClear(fromDate);
             ToDateXpath.WdHighlight();
-            ToDateXpath.WdSendKeysClear(toDate);
-            Thread.Sleep(5000);
+            ToDateXpath.SendKeysClear(toDate);
         }
 
         public bool verifyRecords()
         {
-            Thread.Sleep(5000);
-            IWebElement el = DateXpath.WdFindElement();
+            //Thread.Sleep(5000);
+            DateXpath.WdHighlight();
+            IWebElement el = DateXpath.FindElementExtension();
             string[] arr = DateXpath.SplitString();
             if (arr[0].Equals(fromDate) ){
                 Console.WriteLine(arr[0]);
