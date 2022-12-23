@@ -1,5 +1,7 @@
 ﻿using OpenQA.Selenium;
 using UtilityLibrary.ExtensionMethods;
+using static UtilityLibrary.Selenium.DriverManager;
+using AventStack.ExtentReports;
 
 namespace OrangeHRMPages.Pages.Admin
 {
@@ -11,8 +13,8 @@ namespace OrangeHRMPages.Pages.Admin
         //(//div[@class='oxd-table-cell oxd-padding-cell'])[2]
         public void EnterUserName(string text)
         {
-            
             UserNameXpath.SendKeysExtension(text);
+            Test.Log(Status.Info, " Entered " + text + "For Searching user");
         }
     }
 }

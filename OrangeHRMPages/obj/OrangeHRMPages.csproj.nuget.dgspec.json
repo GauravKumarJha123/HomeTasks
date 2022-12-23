@@ -129,6 +129,10 @@
               "target": "Package",
               "version": "[3.11.0, )"
             },
+            "ExtentReports": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
             "Selenium.Support": {
               "target": "Package",
               "version": "[4.7.0, )"
@@ -140,6 +144,14 @@
             "SeleniumExtras.WaitHelpers": {
               "target": "Package",
               "version": "[1.0.2, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[2.12.0, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             },
             "WebDriverManager": {
               "target": "Package",

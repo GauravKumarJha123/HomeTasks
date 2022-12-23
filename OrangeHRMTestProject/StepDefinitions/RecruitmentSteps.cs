@@ -59,7 +59,7 @@ namespace OrangeHRMTestProject.StepDefinitions
         {
             if (recruitmentPage.VerifyRequiredField())
             {
-                Assert.Pass("You cannpt Login Without Last Name");
+                Assert.Pass("You cannot Login Without Last Name");
             }
             else
             {

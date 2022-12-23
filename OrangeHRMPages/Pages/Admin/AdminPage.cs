@@ -1,10 +1,13 @@
-﻿using OpenQA.Selenium;
+﻿using AventStack.ExtentReports;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UtilityLibrary.ExtensionMethods;
+using static UtilityLibrary.Selenium.DriverManager;
+
 
 namespace OrangeHRMPages.Pages.Admin
 {
@@ -19,10 +22,12 @@ namespace OrangeHRMPages.Pages.Admin
 
         public void ClickOnAdminTab()
         {
-            AdminTab.WdClick();
+            AdminTab.ClickExtension();
+            Test.Log(Status.Info, "Selected Status of User");
+
         }
 
-        
+
 
     }
 }

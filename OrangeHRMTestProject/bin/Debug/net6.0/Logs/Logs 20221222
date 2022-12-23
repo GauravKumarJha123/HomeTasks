@@ -1,0 +1,219 @@
+2022-12-22 00:40:02.942 +05:30 [INF] 
+******************************************
+2022-12-22 00:40:02.984 +05:30 [INF] 
+End of Test Cycle :
+2022-12-22 00:56:28.655 +05:30 [INF] 
+******************************************
+2022-12-22 00:56:28.692 +05:30 [INF] 
+End of Test Cycle :
+2022-12-22 00:56:36.286 +05:30 [INF] 
+******************************************
+2022-12-22 00:56:36.337 +05:30 [INF] 
+End of Test Cycle :
+2022-12-22 00:58:31.708 +05:30 [INF] 
+******************************************
+2022-12-22 00:58:31.745 +05:30 [INF] 
+End of Test Cycle :
+2022-12-22 01:07:19.970 +05:30 [INF] [scenario completed]
+2022-12-22 01:07:20.076 +05:30 [INF] ------------------------------------------------------------
+2022-12-22 01:07:20.358 +05:30 [INF] [Feature completed] 
+2022-12-22 01:07:20.358 +05:30 [INF] ==============================================================
+2022-12-22 01:07:20.363 +05:30 [INF] 
+******************************************
+2022-12-22 01:07:20.363 +05:30 [INF] 
+End of Test Cycle :
+2022-12-22 01:09:07.749 +05:30 [INF] [scenario completed]
+2022-12-22 01:09:07.853 +05:30 [INF] ------------------------------------------------------------
+2022-12-22 01:09:07.855 +05:30 [INF] 
+******************************************
+2022-12-22 01:09:07.855 +05:30 [INF] 
+End of Test Cycle :
+2022-12-22 01:10:37.094 +05:30 [INF] [scenario completed]
+2022-12-22 01:10:37.198 +05:30 [INF] ------------------------------------------------------------
+2022-12-22 01:10:37.199 +05:30 [INF] 
+******************************************
+2022-12-22 01:10:37.200 +05:30 [INF] 
+End of Test Cycle :
+2022-12-22 21:07:28.308 +05:30 [INF] ******************************************
+2022-12-22 21:07:28.390 +05:30 [INF] 
+New Test Cycle :
+2022-12-22 21:07:28.399 +05:30 [INF] [Feature] : 01. Login Feature
+2022-12-22 21:07:28.420 +05:30 [INF] [Scenario Start] : Successful Login with Valid Credentials
+2022-12-22 21:07:28.438 +05:30 [INF] [Step] : User is at the Login Page
+2022-12-22 21:07:31.910 +05:30 [ERR] OpenQA.Selenium.WebDriverException: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=108.0.5359.125)
+   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.set_Url(String value)
+   at OpenQA.Selenium.Navigator.GoToUrl(String url)
+   at UtilityLibrary.PageUtility.PageUtility.NavigatWrapper(String url) in C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\UtilityLibrary\PageUtility\PageUtility.cs:line 14
+   at OrangeHRMPages.Pages.LoginPage.NavigateToLoginPage() in C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\OrangeHRMPages\Pages\LoginPage.cs:line 19
+   at OrangeHRMTestProject.StepDefinitions.LoginSteps.GivenUserIsAtTheHomePage() in C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\OrangeHRMTestProject\StepDefinitions\LoginSteps.cs:line 13
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan& duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)
+2022-12-22 21:07:31.911 +05:30 [ERR] WebDriver
+2022-12-22 21:07:32.024 +05:30 [INF] [scenario completed]
+2022-12-22 21:07:32.024 +05:30 [INF] ------------------------------------------------------------
+2022-12-22 21:07:32.048 +05:30 [INF] [Feature completed] 
+2022-12-22 21:07:32.048 +05:30 [INF] ==============================================================
+2022-12-22 21:07:32.056 +05:30 [INF] 
+******************************************
+2022-12-22 21:07:32.056 +05:30 [INF] 
+End of Test Cycle :
+2022-12-22 21:07:56.959 +05:30 [INF] ******************************************
+2022-12-22 21:07:56.996 +05:30 [INF] 
+New Test Cycle :
+2022-12-22 21:07:57.004 +05:30 [INF] [Feature] : 01. Login Feature
+2022-12-22 21:07:57.024 +05:30 [INF] [Scenario Start] : Successful Login with Valid Credentials
+2022-12-22 21:07:57.036 +05:30 [INF] [Step] : User is at the Login Page
+2022-12-22 21:08:59.190 +05:30 [ERR] OpenQA.Selenium.WebDriverException: The HTTP request to the remote WebDriver server for URL http://localhost:63548/session/471d79dadd6089022ca49a8095d9346a/url timed out after 60 seconds.
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 60 seconds elapsing.
+ ---> System.TimeoutException: The operation was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO.IOException: Unable to read data from the transport connection: The I/O operation has been aborted because of either a thread exit or an application request..
+ ---> System.Net.Sockets.SocketException (995): The I/O operation has been aborted because of either a thread exit or an application request.
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Http.HttpConnection.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpClient.HandleFailure(Exception e, Boolean telemetryStarted, HttpResponseMessage response, CancellationTokenSource cts, CancellationToken cancellationToken, CancellationTokenSource pendingRequestsCts)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.set_Url(String value)
+   at OpenQA.Selenium.Navigator.GoToUrl(String url)
+   at UtilityLibrary.PageUtility.PageUtility.NavigatWrapper(String url) in C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\UtilityLibrary\PageUtility\PageUtility.cs:line 14
+   at OrangeHRMPages.Pages.LoginPage.NavigateToLoginPage() in C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\OrangeHRMPages\Pages\LoginPage.cs:line 19
+   at OrangeHRMTestProject.StepDefinitions.LoginSteps.GivenUserIsAtTheHomePage() in C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\OrangeHRMTestProject\StepDefinitions\LoginSteps.cs:line 13
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan& duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)
+2022-12-22 21:08:59.192 +05:30 [ERR] WebDriver
+2022-12-22 21:08:59.298 +05:30 [INF] [scenario completed]
+2022-12-22 21:08:59.299 +05:30 [INF] ------------------------------------------------------------
+2022-12-22 21:08:59.321 +05:30 [INF] [Feature completed] 
+2022-12-22 21:08:59.321 +05:30 [INF] ==============================================================
+2022-12-22 21:08:59.330 +05:30 [INF] 
+******************************************
+2022-12-22 21:08:59.330 +05:30 [INF] 
+End of Test Cycle :
+2022-12-22 21:11:24.150 +05:30 [INF] ******************************************
+2022-12-22 21:11:24.188 +05:30 [INF] 
+New Test Cycle :
+2022-12-22 21:11:24.193 +05:30 [INF] [Feature] : 01. Login Feature
+2022-12-22 21:11:24.213 +05:30 [INF] [Scenario Start] : Successful Login with Valid Credentials
+2022-12-22 21:11:24.228 +05:30 [INF] [Step] : User is at the Login Page
+2022-12-22 21:12:26.395 +05:30 [ERR] OpenQA.Selenium.WebDriverException: The HTTP request to the remote WebDriver server for URL http://localhost:63698/session/fadf089a57bd033ee2e7c09b890ca95c/url timed out after 60 seconds.
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 60 seconds elapsing.
+ ---> System.TimeoutException: The operation was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO.IOException: Unable to read data from the transport connection: The I/O operation has been aborted because of either a thread exit or an application request..
+ ---> System.Net.Sockets.SocketException (995): The I/O operation has been aborted because of either a thread exit or an application request.
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Http.HttpConnection.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpClient.HandleFailure(Exception e, Boolean telemetryStarted, HttpResponseMessage response, CancellationTokenSource cts, CancellationToken cancellationToken, CancellationTokenSource pendingRequestsCts)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.set_Url(String value)
+   at OpenQA.Selenium.Navigator.GoToUrl(String url)
+   at UtilityLibrary.PageUtility.PageUtility.NavigatWrapper(String url) in C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\UtilityLibrary\PageUtility\PageUtility.cs:line 14
+   at OrangeHRMPages.Pages.LoginPage.NavigateToLoginPage() in C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\OrangeHRMPages\Pages\LoginPage.cs:line 19
+   at OrangeHRMTestProject.StepDefinitions.LoginSteps.GivenUserIsAtTheHomePage() in C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\OrangeHRMTestProject\StepDefinitions\LoginSteps.cs:line 13
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan& duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)
+2022-12-22 21:12:26.396 +05:30 [ERR] WebDriver
+2022-12-22 21:12:26.487 +05:30 [INF] [scenario completed]
+2022-12-22 21:12:26.487 +05:30 [INF] ------------------------------------------------------------
+2022-12-22 21:12:26.507 +05:30 [INF] [Feature completed] 
+2022-12-22 21:12:26.508 +05:30 [INF] ==============================================================
+2022-12-22 21:12:26.516 +05:30 [INF] 
+******************************************
+2022-12-22 21:12:26.517 +05:30 [INF] 
+End of Test Cycle :
+2022-12-22 22:44:48.198 +05:30 [INF] ******************************************
+2022-12-22 22:44:48.217 +05:30 [INF] 
+New Test Cycle :
+2022-12-22 22:44:48.220 +05:30 [INF] [Feature] : 01. Login Feature
+2022-12-22 22:44:48.230 +05:30 [INF] [Scenario Start] : Successful Login with Valid Credentials
+2022-12-22 22:44:48.237 +05:30 [INF] [Step] : User is at the Login Page
+2022-12-22 22:45:49.522 +05:30 [ERR] OpenQA.Selenium.WebDriverException: The HTTP request to the remote WebDriver server for URL http://localhost:58021/session/8c7e7fb2e659d73b679fe7a090c832b9/url timed out after 60 seconds.
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 60 seconds elapsing.
+ ---> System.TimeoutException: The operation was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO.IOException: Unable to read data from the transport connection: The I/O operation has been aborted because of either a thread exit or an application request..
+ ---> System.Net.Sockets.SocketException (995): The I/O operation has been aborted because of either a thread exit or an application request.
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Http.HttpConnection.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpClient.HandleFailure(Exception e, Boolean telemetryStarted, HttpResponseMessage response, CancellationTokenSource cts, CancellationToken cancellationToken, CancellationTokenSource pendingRequestsCts)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.set_Url(String value)
+   at OpenQA.Selenium.Navigator.GoToUrl(String url)
+   at UtilityLibrary.PageUtility.PageUtility.NavigatWrapper(String url) in C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\UtilityLibrary\PageUtility\PageUtility.cs:line 14
+   at OrangeHRMPages.Pages.LoginPage.NavigateToLoginPage() in C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\OrangeHRMPages\Pages\LoginPage.cs:line 19
+   at OrangeHRMTestProject.StepDefinitions.LoginSteps.GivenUserIsAtTheHomePage() in C:\Users\Gaurav_Jha\source\repos\OrangeHRMPages\OrangeHRMTestProject\StepDefinitions\LoginSteps.cs:line 13
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan& duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)
+2022-12-22 22:45:49.522 +05:30 [ERR] WebDriver
+2022-12-22 22:45:49.545 +05:30 [INF] [scenario completed]
+2022-12-22 22:45:49.545 +05:30 [INF] ------------------------------------------------------------
+2022-12-22 22:45:49.550 +05:30 [INF] [Feature completed] 
+2022-12-22 22:45:49.550 +05:30 [INF] ==============================================================
+2022-12-22 22:45:49.551 +05:30 [INF] 
+******************************************
+2022-12-22 22:45:49.551 +05:30 [INF] 
+End of Test Cycle :
+2022-12-22 22:48:53.434 +05:30 [INF] 
+******************************************
+2022-12-22 22:48:53.451 +05:30 [INF] 
+End of Test Cycle :
+2022-12-22 22:49:56.543 +05:30 [INF] 
+******************************************
+2022-12-22 22:49:56.561 +05:30 [INF] 
+End of Test Cycle :
+2022-12-22 22:50:38.480 +05:30 [INF] 
+******************************************
+2022-12-22 22:50:38.498 +05:30 [INF] 
+End of Test Cycle :

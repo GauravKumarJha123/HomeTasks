@@ -1,6 +1,9 @@
 ﻿using OpenQA.Selenium;
 using UtilityLibrary.ExtensionMethods;
 using SeleniumExtras.WaitHelpers;
+using static UtilityLibrary.Selenium.DriverManager;
+using static System.Net.Mime.MediaTypeNames;
+using AventStack.ExtentReports;
 
 namespace OrangeHRMPages.Pages.Leave
 {
@@ -17,15 +20,17 @@ namespace OrangeHRMPages.Pages.Leave
 
         public void ClickOnLeaveTab()
         {
-            LeaveTab.WdHighlight();
-            LeaveTab.WdClick();
+            LeaveTab.HighlightElement();
+            LeaveTab.ClickExtension();
+            Test.Log(Status.Info, " Clicked On Leave Tab");
+
         }
 
         public void GetDates()
         {
-            DateXpath.WdHighlight();
+            DateXpath.HighlightElement();
             IWebElement el = DateXpath.FindElementExtension();
-            string[] arr = DateXpath.SplitString();
+            string[] arr = DateXpath.SplitStringExtension();
             if (arr.Length > 1)
             {
                 fromDate= arr[0];
@@ -36,29 +41,34 @@ namespace OrangeHRMPages.Pages.Leave
                 fromDate = arr[0];
                 toDate = arr[0];
             }
-            Console.WriteLine(fromDate + " to " + toDate);
+            Test.Log(Status.Info, " Fetched Dates are" + fromDate + " and " + toDate);
+
         }
 
         public void EnterDates()
         {
-            FromDateXpath.WdHighlight();
-            FromDateXpath.SendKeysClear(fromDate);
-            ToDateXpath.WdHighlight();
-            ToDateXpath.SendKeysClear(toDate);
+            FromDateXpath.HighlightElement();
+            FromDateXpath.SendKeysClearExtension(fromDate);
+            ToDateXpath.HighlightElement();
+            ToDateXpath.SendKeysClearExtension(toDate);
+            Test.Log(Status.Info, " Entered Dates " + fromDate + " and " + toDate);
+
         }
 
         public bool verifyRecords()
         {
             //Thread.Sleep(5000);
-            DateXpath.WdHighlight();
+            DateXpath.HighlightElement();
             IWebElement el = DateXpath.FindElementExtension();
-            string[] arr = DateXpath.SplitString();
+            string[] arr = DateXpath.SplitStringExtension();
             if (arr[0].Equals(fromDate) ){
                 Console.WriteLine(arr[0]);
+                Test.Log(Status.Info, " VErified Dates are " + arr[0]);
 
                 return true;
+
             }
-            Console.WriteLine(arr[0]);
+
 
             return false;
         }

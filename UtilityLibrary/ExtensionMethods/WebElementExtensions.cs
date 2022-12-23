@@ -14,20 +14,20 @@ namespace UtilityLibrary.ExtensionMethods
     {
         private static IWebDriver _driver = DriverManager.driver;
 
-        public static void WeHighlightElement(this IWebElement element)
+        public static void HighlightWebElement(this IWebElement element)
         {
             var js = (IJavaScriptExecutor)_driver;
             js.ExecuteScript(weHighlightedColour, element);
         }
         
-        public static bool WeElementIsEnabled(this IWebElement element, int sec = 30)
+        public static bool ElementIsEnabledExtension(this IWebElement element, int sec = 30)
         {
             var wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(sec));
             return wait.Until(d =>
             {
                 try
                 {
-                    element.WeHighlightElement();
+                    element.HighlightWebElement();
                     return element.Enabled;
                 }
                 catch (StaleElementReferenceException)
@@ -37,9 +37,9 @@ namespace UtilityLibrary.ExtensionMethods
             });
         }
 
-        public static void WeSelectDropdownOptionByText(this IWebElement element, string text, int sec = 10)
+        public static void SelectDropdownOptionByText(this IWebElement element, string text, int sec = 10)
         {
-            element.WeElementIsEnabled();
+            element.ElementIsEnabledExtension();
             new SelectElement(element).SelectByText(text);
         }
         //public static void WeInputDropDownByText(this IWebElement element, string text, int sec = 10)
@@ -48,29 +48,29 @@ namespace UtilityLibrary.ExtensionMethods
         //    new SelectElement
         //}
 
-        public static void WeSelectDropdownOptionByValue(this IWebElement element, string value, int sec = 30)
+        public static void SelectDropdownOptionByValue(this IWebElement element, string value, int sec = 30)
         {
-            element.WeElementIsEnabled(sec);
+            element.ElementIsEnabledExtension(sec);
             new SelectElement(element).SelectByValue(value);
         }
-        public static void WeSelectDivDropdownOptionByValue(this IWebElement element, string value, int sec = 30)
+        public static void SelectDivDropdownOptionByValue(this IWebElement element, string value, int sec = 30)
         {
-            element.WeElementIsEnabled(sec);
+            element.ElementIsEnabledExtension(sec);
         }
 
-        public static string WeGetAttribute(this IWebElement element, string attribute)
+        public static string GetAttributeExtension(this IWebElement element, string attribute)
         {
             return element.GetAttribute(attribute);
         }
         
-        public static bool WeElementIsDisplayed(this IWebElement element, int sec = 10)
+        public static bool ElementIsDisplayedExtension(this IWebElement element, int sec = 10)
         {
             var wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(sec));
             return wait.Until(d =>
             {
                 try
                 {
-                    element.WeHighlightElement();
+                    element.HighlightWebElement();
                     return element.Displayed;
                 }
                 catch (StaleElementReferenceException)
@@ -79,14 +79,14 @@ namespace UtilityLibrary.ExtensionMethods
                 }
             });
         }
-        public static bool WeIListIsDisplayed(this IList<IWebElement> element,int idx, int sec = 10)
+        public static bool IListIsDisplayedExtension(this IList<IWebElement> element,int idx, int sec = 10)
         {
             var wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(sec));
             return wait.Until(d =>
             {
                 try
                 {
-                    element[idx].WeHighlightElement();
+                    element[idx].HighlightWebElement();
                     return element[idx].Displayed;
                 }
                 catch (StaleElementReferenceException)
@@ -96,35 +96,35 @@ namespace UtilityLibrary.ExtensionMethods
             });
         }
 
-        public static void WeElementIListByIndex(this IList<IWebElement> elements, int idx = 0)
+        public static void ElementIListByIndex(this IList<IWebElement> elements, int idx = 0)
         {
             elements.ElementAt(idx).Click();
         }
 
-        public static void WeSendKeys(this IWebElement element, string text, int sec = 10, bool clearFirst = false)
+        public static void SendKeysByElement(this IWebElement element, string text, int sec = 10, bool clearFirst = false)
         {
-            element.WeElementIsDisplayed(sec);
+            element.ElementIsDisplayedExtension(sec);
             if (clearFirst) element.Clear();
             element.SendKeys(text);
         }
 
-        public static void WeElementToBeClickable(this IWebElement element, int sec = 10)
+        public static void ElementToBeClickable(this IWebElement element, int sec = 10)
         {
             var wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(sec));
             wait.Until(c => element.Enabled);
         }
 
-        public static void WeClick(this IWebElement element, int sec = 10)
+        public static void ClickWebElement(this IWebElement element, int sec = 10)
         {
-            element.WeElementToBeClickable();
-            element.WeHighlightElement();
+            element.ElementToBeClickable();
+            element.HighlightWebElement();
             element.Click();
         }
 
-        public static void WeSwitchTo(this IWebElement iframe, int sec = 10)
+        public static void SwitchToFrameExtension(this IWebElement iframe, int sec = 10)
         {
-            iframe.WeElementToBeClickable(sec);
-            iframe.WeHighlightElement();
+            iframe.ElementToBeClickable(sec);
+            iframe.HighlightWebElement();
             _driver.SwitchTo().Frame(iframe);
         }
     }

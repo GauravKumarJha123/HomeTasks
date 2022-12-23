@@ -1,0 +1,41 @@
+2022-12-21 22:23:25.626 +05:30 [INF] ******************************************
+2022-12-21 22:23:25.648 +05:30 [INF] 
+New Test Cycle :
+2022-12-21 22:23:25.651 +05:30 [INF] [Feature] : 01. Login Feature
+2022-12-21 22:23:26.935 +05:30 [INF] [Scenario Start] : Successful Login with Valid Credentials
+2022-12-21 22:23:26.942 +05:30 [INF] [Step] : User is at the Login Page
+2022-12-21 22:23:30.722 +05:30 [INF] [Step] : User enter credentials 'Admin' and 'admin123'
+2022-12-21 22:23:31.472 +05:30 [INF] [Step] : Click on the LogIn button
+2022-12-21 22:23:31.563 +05:30 [INF] [Step] : Successful LogIN message should display
+2022-12-21 22:23:32.761 +05:30 [INF] [scenario completed]
+2022-12-21 22:23:32.761 +05:30 [INF] ------------------------------------------------------------
+2022-12-21 22:23:32.765 +05:30 [INF] [Feature completed] 
+2022-12-21 22:23:32.766 +05:30 [INF] ==============================================================
+2022-12-21 22:23:32.767 +05:30 [INF] 
+******************************************
+2022-12-21 22:23:32.767 +05:30 [INF] 
+End of Test Cycle :
+2022-12-21 22:27:16.035 +05:30 [INF] ******************************************
+2022-12-21 22:27:16.054 +05:30 [INF] 
+New Test Cycle :
+2022-12-21 22:27:16.058 +05:30 [INF] [Feature] : 02. Admin Page Feature
+2022-12-21 22:27:17.332 +05:30 [INF] [Scenario Start] : 01. Add Users To the Record
+2022-12-21 22:27:22.883 +05:30 [INF] [Step] : I am Logged in Sucessfully
+2022-12-21 22:27:22.892 +05:30 [INF] [Step] : I Click on Admin Tab
+2022-12-21 22:27:24.403 +05:30 [INF] [Step] : I Click on Add Button
+2022-12-21 22:27:25.445 +05:30 [INF] [Step] : I Select User Role
+2022-12-21 22:27:26.083 +05:30 [INF] [Step] : I Select User Status
+2022-12-21 22:27:26.190 +05:30 [INF] [Step] : I Select Employee Name
+2022-12-21 22:27:26.343 +05:30 [INF] [Step] : I Select User Name
+2022-12-21 22:27:26.457 +05:30 [INF] [Step] : I Select User Password
+2022-12-21 22:27:26.543 +05:30 [INF] [Step] : I Enter Password Again
+2022-12-21 22:27:26.623 +05:30 [INF] [Step] : I Click on Save Button
+2022-12-21 22:27:26.682 +05:30 [INF] [Step] : User is Added
+2022-12-21 22:27:26.813 +05:30 [INF] [scenario completed]
+2022-12-21 22:27:26.813 +05:30 [INF] ------------------------------------------------------------
+2022-12-21 22:27:26.818 +05:30 [INF] [Feature completed] 
+2022-12-21 22:27:26.818 +05:30 [INF] ==============================================================
+2022-12-21 22:27:26.820 +05:30 [INF] 
+******************************************
+2022-12-21 22:27:26.820 +05:30 [INF] 
+End of Test Cycle :

@@ -21,5 +21,6 @@
   <ItemGroup>
     <ProjectReference Include="..\OrangeHRMPages\OrangeHRMPages.csproj" />
   </ItemGroup>
+	
 
 </Project>

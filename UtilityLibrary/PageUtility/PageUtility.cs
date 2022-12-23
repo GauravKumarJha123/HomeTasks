@@ -16,7 +16,7 @@ namespace UtilityLibrary.PageUtility
 
         public static void ClickWrapper(By element)
         {
-            element.WdClick();
+            element.ClickExtension();
         }
 
         public static void Maximize()

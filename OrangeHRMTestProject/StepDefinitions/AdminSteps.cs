@@ -1,5 +1,4 @@
-﻿
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using OrangeHRMPages.Pages;
 using OrangeHRMPages.Pages.Admin;
@@ -52,9 +51,7 @@ namespace OrangeHRMTestProject.StepDefinitions
         {
             try
             {
-                
                 adminPage.addUserPage.SelectStatus();
-
             }
             catch (Exception ex) { Console.WriteLine(ex.Message); }
         }
@@ -143,7 +140,7 @@ namespace OrangeHRMTestProject.StepDefinitions
         {
             
             element = adminPage.UserNamesByIdx(0);
-            element.WeElementIsDisplayed();
+            element.ElementIsDisplayedExtension();
         }
 
         

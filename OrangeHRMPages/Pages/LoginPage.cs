@@ -18,6 +18,7 @@ namespace OrangeHRMPages.Pages
         {
             NavigatWrapper(BasePageUrl);
         }
+
         public void LoginConfirmation()
         {
             try

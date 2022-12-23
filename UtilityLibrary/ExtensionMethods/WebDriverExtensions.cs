@@ -12,7 +12,7 @@ namespace UtilityLibrary.ExtensionMethods
     {
         private static IWebDriver _driver = DriverManager.driver;
 
-        public static object WdHighlight(this By locator)
+        public static object HighlightElement(this By locator)
         {
             var wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(30));
             wait.Until(ExpectedConditions.VisibilityOfAllElementsLocatedBy(locator));
@@ -28,7 +28,7 @@ namespace UtilityLibrary.ExtensionMethods
             {
                 try
                 {
-                    locator.WdHighlight();
+                    locator.HighlightElement();
                     return drv.FindElement(locator);
                 }
                 catch (NoSuchElementException)
@@ -38,7 +38,7 @@ namespace UtilityLibrary.ExtensionMethods
             });
         }
 
-        public static string[] SplitString(this By locator)
+        public static string[] SplitStringExtension(this By locator)
         {
             IWebElement el = locator.FindElementExtension();
             string s = el.Text.ToString();
@@ -51,19 +51,19 @@ namespace UtilityLibrary.ExtensionMethods
             if (clearFirst) locator.FindElementExtension(sec).Clear();
             locator.FindElementExtension(sec).SendKeys(text);
         }
-        public static void SendKeysClear(this By element, string text)
+        public static void SendKeysClearExtension(this By element, string text)
         {
             Actions actions = new Actions(DriverManager.driver);
             actions.MoveToElement(DriverManager.driver.FindElement(element)).DoubleClick().Click().SendKeys(Keys.Backspace).SendKeys(text).SendKeys(Keys.Tab).Build().Perform();
         }
 
-        public static void WdClickByIndex(this By locator, int index, int sec = 10)
+        public static void ClickByIndexExtension(this By locator, int index, int sec = 10)
         {
             var myLocator = _driver.FindElements(locator);
             myLocator[index].Click();
         }
 
-        public static void DropdwonByText(this By element, string text)
+        public static void DropdwonByTextExtension(this By element, string text)
         {
             IList<IWebElement> webElements = DriverManager.driver.FindElements(element);
             foreach(var autosug in webElements)
@@ -81,8 +81,8 @@ namespace UtilityLibrary.ExtensionMethods
             for(int i =0; i < webElements.Count(); i++)
             {
                 IWebElement webElement = webElements[i];
-                webElement.WeElementToBeClickable();
-                webElement.WeHighlightElement();
+                webElement.ElementToBeClickable();
+                webElement.HighlightWebElement();
                 webElement.Click();
                 break;
             }
@@ -90,12 +90,12 @@ namespace UtilityLibrary.ExtensionMethods
         public static void DropdwonByContainsTextExtension(this By element)
         {
                 IWebElement webElement = element.FindElementExtension();
-                webElement.WeElementToBeClickable();
-                webElement.WeHighlightElement();
+                webElement.ElementToBeClickable();
+                webElement.HighlightWebElement();
                 webElement.Click();
                
         }
-        public static void WdDropdwonByIdx(this By element, int idx = 0)
+        public static void DropdwonByIdxExtension(this By element, int idx = 0)
         {
             IList<IWebElement> webElements = DriverManager.driver.FindElements(element);
             for(int i = 0; i < idx;   i++)
@@ -108,7 +108,7 @@ namespace UtilityLibrary.ExtensionMethods
             }
         }
 
-        public static void WdClick(this By locator, int sec = 10)
+        public static void ClickExtension(this By locator, int sec = 20)
         {
             locator.FindElementExtension(sec).Click();
         }

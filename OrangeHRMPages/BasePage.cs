@@ -14,21 +14,21 @@ namespace OrangeHRMPages
        
         public void ClickonAddUserButton()
         {
-            AddUsers.WdHighlight();
-            AddUsers.WdClick();
+            AddUsers.HighlightElement();
+            AddUsers.ClickExtension();
         }
 
         public void ClickonSearchUserButton()
         {
             
-            SearchUser.WdHighlight();
-            SearchUser.WdClick();
+            SearchUser.HighlightElement();
+            SearchUser.ClickExtension();
         }
 
         public void ClickonResetUsersButton()
         {
-            ResetUsers.WdHighlight();
-            ResetUsers.WdClick();
+            ResetUsers.HighlightElement();
+            ResetUsers.ClickExtension();
         }
 
         public IEnumerable<IWebElement> UserData()
@@ -39,7 +39,7 @@ namespace OrangeHRMPages
         public IWebElement UserNamesByIdx(int idx)
         {
             
-            UserNamesXpath.WdHighlight();
+            UserNamesXpath.HighlightElement();
             return driver.FindElements(UserNamesXpath).ElementAt(idx);
         }
 
