@@ -12,6 +12,7 @@ namespace RestApiAutomationTests.StepDefinitons
     [Binding]
     public sealed class PostSteps
     {
+        
         [Given(@"I Create a new Post using id (.*) title '([^']*)' and author '([^']*)'")]
         public void GivenICreateANewPostUsingIdTitleAndAuthor(int id, string title, string author)
         {

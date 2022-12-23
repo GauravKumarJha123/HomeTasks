@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Net;
+using RestApiBL.Models.Response;
 
 namespace RestApiBL.Utils
 {
@@ -23,10 +24,49 @@ namespace RestApiBL.Utils
                 "posts", CreatePostRequestBody(id, title, author)
                 );
         }
-        public static string[] GetPostUtil(int id)
+
+        public static UpdatePutValidResponse UpdatePost(int id, String title, string author)
         {
-            return RestClientUtil.GetPost("posts/" + id.ToString()); 
+            return RestClientUtil.Put<UpdatePutValidResponse>
+                 (
+                 "posts/"+id.ToString() , UpdatePostRequestBody(id, title, author)
+                 );
         }
+
+        public static UpdatePutValidResponse UpdatePostUsingPatch(String title)
+        {
+            return RestClientUtil.Patch<UpdatePutValidResponse>
+                 (
+                 "posts/2" , UpdatePatchRequestBody(title)
+                 );
+        }
+
+        public static UpdatePutValidResponse GetPostUsingPatch(int id, String title, string author)
+        {
+            return RestClientUtil.Get<UpdatePutValidResponse>
+                 (
+                 "posts/" + id.ToString(), UpdatePostRequestBody(id,title,author)
+                 );
+        }
+
+        private static string UpdatePatchRequestBody( string title)
+        {
+            UpdatePutValidResponse updatePostValidRequest = new UpdatePutValidResponse();
+            updatePostValidRequest.title = title;
+
+            return JsonConvert.SerializeObject(updatePostValidRequest);
+        }
+
+        private static string UpdatePostRequestBody(int id, string title, string author)
+        {
+            UpdatePutValidResponse updatePostValidRequest = new UpdatePutValidResponse();
+            updatePostValidRequest.id = id;
+            updatePostValidRequest.title = title;
+            updatePostValidRequest.author = author;
+
+            return JsonConvert.SerializeObject(updatePostValidRequest);
+        }
+
         public static string CreatePostRequestBody(int id , string title , string author)
         {
 
@@ -44,5 +84,8 @@ namespace RestApiBL.Utils
             return RestClientUtil.Delete("posts/" + id.ToString() ,HttpStatusCode.OK);
         }
 
+        // retrieve
+
+       
     }
 }

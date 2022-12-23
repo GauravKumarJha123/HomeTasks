@@ -98,7 +98,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given(string.Format("I Create a new Post using id {0} title \'{1}\' and author \'{2}\'", id, title, author), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 6
- testRunner.Then(string.Format("I Delete the post the post with id {0} title \'<title\'> and author \'{1}\'", id, author), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("I Should be able to get the post with id {0} title \'{1}\' and author \'{2}\'", id, title, author), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

@@ -1,13 +1,7 @@
 ﻿using Newtonsoft.Json;
 using RestSharp;
-using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Text.Json;
-using System.Threading.Tasks;
 
 namespace RestApiAutomationFramework.Utils
 {
@@ -32,7 +26,20 @@ namespace RestApiAutomationFramework.Utils
                 }
             }
         }
-        public static T Post<T>(string resource,string payload)
+
+        public static RestRequest CreateRequest(string resource, Method method)
+        {
+            if (_RestRequest == null)
+            {
+                return new RestRequest(resource, method);
+            }
+            else
+            {
+                return _RestRequest;
+            }
+        }
+
+        public static T Post<T>(string resource, string payload)
         {
             var response = RestClient.Execute
                 (
@@ -43,51 +50,50 @@ namespace RestApiAutomationFramework.Utils
             return JsonConvert.DeserializeObject<T>(responseBody);
         }
 
-        public static RestRequest CreateRequest(string resource, Method method)
+        public static T Put<T>(string resource, string payload)
         {
-            if(_RestRequest== null)
-            {
-                return new RestRequest(resource, method);
-            }
-            else
-            {
-                return _RestRequest;
-            }
-        }
-
-
-        // delte
-        public static bool Delete(string resource, HttpStatusCode expectedStatusCode)
-        {
-
-            var resposne = RestClient.Execute
+            var response = RestClient.Execute
                 (
-                    CreateRequest(resource, Method.Delete)
+                    CreateRequest(resource, Method.Put)
+                    .AddJsonBody(payload)
                 );
-
-                return resposne.StatusCode.Equals(expectedStatusCode);
+            var responseBody = response.Content;
+            return JsonConvert.DeserializeObject<T>(responseBody);
         }
 
+        public static T Patch<T>(string resource, string payload)
+        {
+            var response = RestClient.Execute
+                (
+                    CreateRequest(resource, Method.Patch)
+                    .AddJsonBody(payload)
+                );
+            var responseBody = response.Content;
+            return JsonConvert.DeserializeObject<T>(responseBody);
+        }
 
-        public static string[] GetPost(string resource)
+        public static T Get<T>(string resource, string payload)
         {
             var response = RestClient.Execute
                 (
                     CreateRequest(resource, Method.Get)
                 );
             var responseBody = response.Content;
-            return JsonConvert.DeserializeObject<string[]>(responseBody);
+            return JsonConvert.DeserializeObject<T>(responseBody);
         }
 
-        //public static string[] GetPost(string resource)
-        //{
-        //    var response = RestClient.Execute
-        //        (
-        //            CreateRequest(resource, Method.Get)
-        //        );
-        //    var responseBody = response.Content;
-        //    return JsonConvert.SerializeObject<string[]>(responseBody);
-        //}
+        // delete
+        public static bool Delete(string resource, HttpStatusCode expectedStatusCode)
+        {
+            var response = RestClient.Execute
+                (
+                    CreateRequest(resource, Method.Delete)
+                );
+            return response.StatusCode.Equals(expectedStatusCode);
+        }
+
+        // retrieve
+
 
 
         //update

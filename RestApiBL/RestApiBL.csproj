@@ -75,7 +75,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Models\Response\UpdatePutValidResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\Request\CreatePostValidRequest.cs" />
     <Compile Include="Models\Response\CreatePostValidResponse.cs" />

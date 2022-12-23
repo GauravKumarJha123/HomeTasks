@@ -12,10 +12,12 @@ namespace RestApiAutomationTests.StepDefinitons
     [Binding]
     public sealed class DeleteSteps
     {
-        [Then(@"I Delete the post the post with id (.*) title '([^']*)'> and author '([^']*)'")]
+
+        [Then(@"I Delete the post the post with id (.*) title '([^']*)' and author '([^']*)'")]
         public void ThenIDeleteThePostThePostWithIdTitleAndAuthor(int id, string title, string author)
         {
             Assert.IsTrue(PostUtils.DeletePost(id));
+
         }
 
     }

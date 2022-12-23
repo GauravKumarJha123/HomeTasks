@@ -20,22 +20,22 @@ namespace RestApiAutomationTests.Feature
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Delete")]
-    public partial class DeleteFeature
+    [NUnit.Framework.DescriptionAttribute("Put")]
+    public partial class PutFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private static string[] featureTags = ((string[])(null));
         
-#line 1 "Delete.feature"
+#line 1 "Put.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Feature", "Delete", null, ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Feature", "Put", null, ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -74,16 +74,16 @@ namespace RestApiAutomationTests.Feature
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Delete a new Post")]
-        [NUnit.Framework.TestCaseAttribute("2", "AutoBiography of Yogi", "Paramahansa Yogananda", null)]
-        public void DeleteANewPost(string id, string title, string author, string[] exampleTags)
+        [NUnit.Framework.DescriptionAttribute("Update The Existing Fields")]
+        [NUnit.Framework.TestCaseAttribute("2", "ASD", "CVB", null)]
+        public void UpdateTheExistingFields(string id, string title, string author, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("id", id);
             argumentsOfScenario.Add("title", title);
             argumentsOfScenario.Add("author", author);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete a new Post", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Update The Existing Fields", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 4
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -95,10 +95,10 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 5
- testRunner.Given(string.Format("I Create a new Post using id {0} title \'{1}\' and author \'{2}\'", id, title, author), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given(string.Format("I Update a Post using id {0} title \'{1}\' and author \'{2}\'", id, title, author), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 6
- testRunner.Then(string.Format("I Delete the post the post with id {0} title \'{1}\' and author \'{2}\'", id, title, author), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("I Should be able to get the post with id {0} title \'{1}\' and author \'{2}\'", id, title, author), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

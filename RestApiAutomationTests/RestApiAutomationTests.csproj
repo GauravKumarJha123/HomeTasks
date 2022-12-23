@@ -68,15 +68,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StepDefinitons\DeleteSteps.cs" />
+    <Compile Include="StepDefinitons\GetSteps.cs" />
+    <Compile Include="StepDefinitons\PatchSteps.cs" />
     <Compile Include="StepDefinitons\PostSteps.cs" />
+    <Compile Include="StepDefinitons\PustSteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="Feature\Delete.feature" />
+    <None Include="Feature\Get.feature" />
+    <None Include="Feature\Patch.feature" />
     <None Include="Feature\Post.feature" />
+    <None Include="Feature\Put.feature" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
