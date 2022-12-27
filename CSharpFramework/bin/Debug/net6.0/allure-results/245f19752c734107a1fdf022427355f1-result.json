@@ -1,0 +1,190 @@
+{
+  "uuid": "f33006b5bead44be8df9fbb4e553d695",
+  "historyId": "Checkout as Valid User",
+  "fullName": "Checkout as Valid User",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#4"
+    },
+    {
+      "name": "host",
+      "value": "EPINHYDW076A"
+    },
+    {
+      "name": "feature",
+      "value": "04. Checkout"
+    },
+    {
+      "name": "tag",
+      "value": "Checkout"
+    }
+  ],
+  "links": [],
+  "name": "Checkout as Valid User",
+  "status": "broken",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "invalid session id",
+    "trace": "OpenQA.Selenium.WebDriverException: invalid session id\r\n   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.GetScreenshot()\r\n   at UtilityClassLib.Hooks.SpecFlowHooks.CaptureScreenshotAllure() in C:\\Users\\Gaurav_Jha\\source\\repos\\CSharpFramework\\CSharpFramework\\Hooks\\SpecFlowHooks.cs:line 69\r\n   at UtilityClassLib.Hooks.SpecFlowHooks.AfterStep() in C:\\Users\\Gaurav_Jha\\source\\repos\\CSharpFramework\\CSharpFramework\\Hooks\\SpecFlowHooks.cs:line 63\r\n   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)\r\n   at Allure.SpecFlowPlugin.AllureBindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  I am logged in Sucessfully",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672059281917,
+      "stop": 1672059281921
+    },
+    {
+      "name": "And  I have Added Items To Cart",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672059281921,
+      "stop": 1672059281926
+    },
+    {
+      "name": "And  I Navigate To Cart Page and Click on Checkout Button",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672059281926,
+      "stop": 1672059281935
+    },
+    {
+      "name": "And  I Enter FirstName as 'Gaurav'",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672059281935,
+      "stop": 1672059282051
+    },
+    {
+      "name": "And  I Enter LastName as 'Jha'",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672059282052,
+      "stop": 1672059282133
+    },
+    {
+      "name": "And  I Enter ZipCode as '110001'",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672059282133,
+      "stop": 1672059282672
+    },
+    {
+      "name": "And  I Click on Continue Button",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672059282672,
+      "stop": 1672059282831
+    },
+    {
+      "name": "Then  Checkout is Intiated",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672059282831,
+      "stop": 1672059282836
+    },
+    {
+      "name": "When  I Click on Finish Button",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672059282836,
+      "stop": 1672059283038
+    },
+    {
+      "name": "Then  Checkout Process is completed",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672059283038,
+      "stop": 1672059283267
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1672059281917,
+  "stop": 1672059283267
+}

@@ -1,0 +1,94 @@
+{
+  "uuid": "9fbdf163b4754b06b77fb72ebc25bf1d",
+  "children": [
+    "4c2a08200a2547b99a347777285c3cb3"
+  ],
+  "befores": [
+    {
+      "name": "StartChromeDriver [10000]",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672060420523,
+      "stop": 1672060422003
+    },
+    {
+      "name": "LoginHooks [10000]",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672060422003,
+      "stop": 1672060423900
+    },
+    {
+      "name": "InventoryHooks [10000]",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672060423900,
+      "stop": 1672060424347
+    },
+    {
+      "name": "CartHooks [10000]",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672060424347,
+      "stop": 1672060424652
+    }
+  ],
+  "afters": [
+    {
+      "name": "AfterStep [10000]",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Test",
+          "source": "56f1dfe3f1704dd38333d710065a428e-attachment",
+          "type": "application/png"
+        }
+      ],
+      "parameters": [],
+      "start": 1672060425130,
+      "stop": 1672060444345
+    }
+  ],
+  "links": [],
+  "start": 1672060420523,
+  "stop": 1672060444370
+}

@@ -1,0 +1,64 @@
+{
+  "uuid": "7919fc3e72f140ac8a1ff02f3732ce05",
+  "children": [
+    "65d392703e48444395e50d5b93504d04"
+  ],
+  "befores": [
+    {
+      "name": "StartChromeDriver [10000]",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672061810606,
+      "stop": 1672061813063
+    },
+    {
+      "name": "LoginHooks [10000]",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672061813064,
+      "stop": 1672061814917
+    }
+  ],
+  "afters": [
+    {
+      "name": "AfterStep [10000]",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Test",
+          "source": "03952081d9234833b19bac266a972f94-attachment",
+          "type": "application/png"
+        }
+      ],
+      "parameters": [],
+      "start": 1672061818716,
+      "stop": 1672061819246
+    }
+  ],
+  "links": [],
+  "start": 1672061810605,
+  "stop": 1672061819306
+}

@@ -1,0 +1,103 @@
+{
+  "uuid": "f77ec402e1264c6d97514a03ad9c97a3",
+  "children": [
+    "5890046e1c764325b31a0b18b56f8a1c"
+  ],
+  "befores": [
+    {
+      "name": "StartChromeDriver [10000]",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672059579736,
+      "stop": 1672059582487
+    },
+    {
+      "name": "LoginHooks [10000]",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672059582487,
+      "stop": 1672059584314
+    },
+    {
+      "name": "InventoryHooks [10000]",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672059584314,
+      "stop": 1672059589715
+    },
+    {
+      "name": "CartHooks [10000]",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672059589715,
+      "stop": 1672059590486
+    }
+  ],
+  "afters": [
+    {
+      "name": "StopWebDriver [10000]",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672059591844,
+      "stop": 1672059592766
+    },
+    {
+      "name": "AfterStep [10000]",
+      "status": "broken",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672059592766,
+      "stop": 1672059593256
+    }
+  ],
+  "links": [],
+  "start": 1672059579735,
+  "stop": 1672059593259
+}

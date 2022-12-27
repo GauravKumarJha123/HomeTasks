@@ -1,0 +1,239 @@
+{
+  "uuid": "2aef787e15c44c15aeb373e8c93f31d9",
+  "historyId": "Checkout as Valid User",
+  "fullName": "Checkout as Valid User",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#4"
+    },
+    {
+      "name": "host",
+      "value": "EPINHYDW076A"
+    },
+    {
+      "name": "feature",
+      "value": "04. Checkout"
+    },
+    {
+      "name": "tag",
+      "value": "Checkout"
+    }
+  ],
+  "links": [],
+  "name": "Checkout as Valid User",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  I am logged in Sucessfully",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672057422142,
+      "stop": 1672057422154
+    },
+    {
+      "name": "And  I have Added Items To Cart",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672057422316,
+      "stop": 1672057422323
+    },
+    {
+      "name": "And  I Navigate To Cart Page and Click on Checkout Button",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672057422480,
+      "stop": 1672057422489
+    },
+    {
+      "name": "And  I Enter FirstName as 'Gaurav'",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672057422652,
+      "stop": 1672057422733
+    },
+    {
+      "name": "And  I Enter LastName as 'Jha'",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672057422881,
+      "stop": 1672057422950
+    },
+    {
+      "name": "And  I Enter ZipCode as '110001'",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672057423098,
+      "stop": 1672057423172
+    },
+    {
+      "name": "And  I Click on Continue Button",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672057423323,
+      "stop": 1672057423403
+    },
+    {
+      "name": "Then  Checkout is Intiated",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672057423564,
+      "stop": 1672057423569
+    },
+    {
+      "name": "When  I Click on Finish Button",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672057423713,
+      "stop": 1672057423772
+    },
+    {
+      "name": "Then  Checkout Process is completed",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672057423976,
+      "stop": 1672057424133
+    }
+  ],
+  "attachments": [
+    {
+      "name": "Failed Screenshot",
+      "source": "1096a5485064486e8fdedeff83a8ba1b-attachment",
+      "type": "application/png"
+    },
+    {
+      "name": "Failed Screenshot",
+      "source": "81308c2809e9417e8a24d08e64dc3721-attachment",
+      "type": "application/png"
+    },
+    {
+      "name": "Failed Screenshot",
+      "source": "4da6dfcf96654082a86e4ecd6c43a568-attachment",
+      "type": "application/png"
+    },
+    {
+      "name": "Failed Screenshot",
+      "source": "3095d1c7f8ea4acf8161f89b07c6aa1b-attachment",
+      "type": "application/png"
+    },
+    {
+      "name": "Failed Screenshot",
+      "source": "1434a2b4e14b48b5bd3eb79c36ecfd19-attachment",
+      "type": "application/png"
+    },
+    {
+      "name": "Failed Screenshot",
+      "source": "0c7d25c504bd490292c843224fbc92c4-attachment",
+      "type": "application/png"
+    },
+    {
+      "name": "Failed Screenshot",
+      "source": "a9c428d6ab3a4e36b19d03c7affad8f2-attachment",
+      "type": "application/png"
+    },
+    {
+      "name": "Failed Screenshot",
+      "source": "7e3f297cc4e841f3b0e609dd0f3b40ed-attachment",
+      "type": "application/png"
+    },
+    {
+      "name": "Failed Screenshot",
+      "source": "0e32d74fe3294d058bd0cd674f79e61a-attachment",
+      "type": "application/png"
+    },
+    {
+      "name": "Failed Screenshot",
+      "source": "2df3b40323c64b95b40441f5af050db3-attachment",
+      "type": "application/png"
+    }
+  ],
+  "parameters": [],
+  "start": 1672057422135,
+  "stop": 1672057424293
+}

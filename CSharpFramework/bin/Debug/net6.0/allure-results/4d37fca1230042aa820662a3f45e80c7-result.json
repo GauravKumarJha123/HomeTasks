@@ -1,0 +1,55 @@
+{
+  "uuid": "c2f5fa99e1014b4992363ee86648e49c",
+  "historyId": "Checkout as Valid User",
+  "fullName": "Checkout as Valid User",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#1"
+    },
+    {
+      "name": "host",
+      "value": "EPINHYDW076A"
+    },
+    {
+      "name": "feature",
+      "value": "04. Checkout"
+    },
+    {
+      "name": "tag",
+      "value": "Checkout"
+    }
+  ],
+  "links": [],
+  "name": "Checkout as Valid User",
+  "status": "broken",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "The ScenarioContext.Current static accessor cannot be used in multi-threaded execution. Try injecting the scenario context to the binding class. See https://go.specflow.org/doc-multithreaded for details.",
+    "trace": "TechTalk.SpecFlow.SpecFlowException: The ScenarioContext.Current static accessor cannot be used in multi-threaded execution. Try injecting the scenario context to the binding class. See https://go.specflow.org/doc-multithreaded for details.\r\n   at TechTalk.SpecFlow.ScenarioContext.get_Current()\r\n   at UtilityClassLib.Hooks.SpecFlowHooks.AfterStep() in C:\\Users\\Gaurav_Jha\\source\\repos\\CSharpFramework\\CSharpFramework\\Hooks\\SpecFlowHooks.cs:line 64\r\n   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)\r\n   at Allure.SpecFlowPlugin.AllureBindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  I am logged in Sucessfully",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672059162162,
+      "stop": 1672059162179
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1672059162162,
+  "stop": 1672059162458
+}

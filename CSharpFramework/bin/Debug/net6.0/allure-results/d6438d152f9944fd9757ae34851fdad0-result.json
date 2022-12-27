@@ -1,0 +1,122 @@
+{
+  "uuid": "3aef4a8830444abb9fdb9daa12289cce",
+  "historyId": "01. Trying With Valid Credentials430927007",
+  "fullName": "01. Trying With Valid Credentials",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#2"
+    },
+    {
+      "name": "host",
+      "value": "EPINHYDW076A"
+    },
+    {
+      "name": "feature",
+      "value": "01. LoginScenarios"
+    },
+    {
+      "name": "tag",
+      "value": "Chrome"
+    },
+    {
+      "name": "tag",
+      "value": "Login"
+    }
+  ],
+  "links": [],
+  "name": "01. Trying With Valid Credentials",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  a user is on the base page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672056293490,
+      "stop": 1672056297294
+    },
+    {
+      "name": "When  I Enter Valid Credentials 'locked_out_user'",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672056297294,
+      "stop": 1672056297461
+    },
+    {
+      "name": "And  I Enter Password 'secret_sauce'",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672056297461,
+      "stop": 1672056297600
+    },
+    {
+      "name": "And  I Click on Login Button",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672056297600,
+      "stop": 1672056297786
+    },
+    {
+      "name": "Then  I Navigate to Inventory Page Url",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672056297786,
+      "stop": 1672056298022
+    }
+  ],
+  "attachments": [],
+  "parameters": [
+    {
+      "name": "UserName",
+      "value": "locked_out_user"
+    }
+  ],
+  "start": 1672056293490,
+  "stop": 1672056298022
+}

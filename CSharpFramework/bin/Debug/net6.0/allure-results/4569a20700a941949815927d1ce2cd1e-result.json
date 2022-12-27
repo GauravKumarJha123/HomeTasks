@@ -1,0 +1,122 @@
+{
+  "uuid": "830bff910aeb4c69966d4ccba5c59987",
+  "historyId": "01. Trying With Valid Credentials659670351",
+  "fullName": "01. Trying With Valid Credentials",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "EPINHYDW076A"
+    },
+    {
+      "name": "feature",
+      "value": "01. LoginScenarios"
+    },
+    {
+      "name": "tag",
+      "value": "Chrome"
+    },
+    {
+      "name": "tag",
+      "value": "Login"
+    }
+  ],
+  "links": [],
+  "name": "01. Trying With Valid Credentials",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  a user is on the base page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672050330875,
+      "stop": 1672050331491
+    },
+    {
+      "name": "When  I Enter Valid Credentials 'problem_user'",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672050331492,
+      "stop": 1672050331588
+    },
+    {
+      "name": "And  I Enter Password 'secret_sauce'",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672050331588,
+      "stop": 1672050331655
+    },
+    {
+      "name": "And  I Click on Login Button",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672050331656,
+      "stop": 1672050331747
+    },
+    {
+      "name": "Then  I Navigate to Inventory Page Url",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672050331747,
+      "stop": 1672050331952
+    }
+  ],
+  "attachments": [],
+  "parameters": [
+    {
+      "name": "UserName",
+      "value": "problem_user"
+    }
+  ],
+  "start": 1672050330875,
+  "stop": 1672050331952
+}

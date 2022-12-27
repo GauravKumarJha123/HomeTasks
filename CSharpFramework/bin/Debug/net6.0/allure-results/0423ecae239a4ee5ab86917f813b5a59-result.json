@@ -1,0 +1,132 @@
+{
+  "uuid": "400f27fc8de2434cbb6b24b5c24558eb",
+  "historyId": "Adding Inventory items to Cart",
+  "fullName": "Adding Inventory items to Cart",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#2"
+    },
+    {
+      "name": "host",
+      "value": "EPINHYDW076A"
+    },
+    {
+      "name": "feature",
+      "value": "02. Inventory"
+    },
+    {
+      "name": "tag",
+      "value": "Chrome"
+    },
+    {
+      "name": "tag",
+      "value": "Inventory"
+    }
+  ],
+  "links": [],
+  "name": "Adding Inventory items to Cart",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  I am Logged in With Valid Credentials",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672061664637,
+      "stop": 1672061664686
+    },
+    {
+      "name": "And  I Navigated to Inventory Page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672061664686,
+      "stop": 1672061664705
+    },
+    {
+      "name": "When  I Added Items To Cart",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672061664705,
+      "stop": 1672061665032
+    },
+    {
+      "name": "And  I Click on Cart Button",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672061665032,
+      "stop": 1672061665118
+    },
+    {
+      "name": "Then  Items are added to the cart",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672061665118,
+      "stop": 1672061665123
+    },
+    {
+      "name": "And  I NAvigate ot Cart Page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672061665123,
+      "stop": 1672061665442
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1672061664637,
+  "stop": 1672061665442
+}

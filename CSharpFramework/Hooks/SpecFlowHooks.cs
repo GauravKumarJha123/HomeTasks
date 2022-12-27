@@ -1,6 +1,10 @@
 ﻿using TechTalk.SpecFlow;
 using UtilityClassLib.Utilities;
 using CSharpFrameworkClassLib.Pages.PageObjects;
+using OpenQA.Selenium;
+using Allure.Commons;
+using WebDriverManager;
+using UtilityClassLib.Utilities.Selenium;
 
 namespace UtilityClassLib.Hooks
 {
@@ -9,8 +13,6 @@ namespace UtilityClassLib.Hooks
     [Binding]
     public sealed class SpecFlowHooks : BaseTest
     {
-
-
         [BeforeScenario]
         //[Scope(Tag = "Chrome")]
         public void StartChromeDriver()
@@ -49,10 +51,24 @@ namespace UtilityClassLib.Hooks
             cartPage.IntiateCheckout();
         }
 
+        //[AfterScenario]
+        //public void StopWebDriver()
+        //{
+        //    EndTest();
+        //}
+
         [AfterScenario]
-        public void StopWebDriver()
+        public void AfterStep()
         {
+            byte[] content = CaptureScreenshotAllure();
+            AllureLifecycle.Instance.AddAttachment("Test", "application/png", content);
             EndTest();
         }
+
+        public static byte[] CaptureScreenshotAllure()
+        {
+            return ((ITakesScreenshot)BasePage.CurrentDriver).GetScreenshot().AsByteArray;
+        }
+
     }
 }

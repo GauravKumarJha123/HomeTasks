@@ -9,17 +9,14 @@ namespace CSharpFrameworkClassLib.Pages.PageObjects
     public class InventoryPage : PageUtiltiy
     {
         
-        
         #region locators
         private By items => By.XPath("//button[@class='btn btn_primary btn_small btn_inventory']");
         private By itemsTitle => GetXpathUsingDivClass("inventory_item_name");
         private By itemsPrice => GetXpathUsingDivClass("inventory_item_price");
         private By cartBtn => GetByID("shopping_cart_container");
-
         #endregion
 
         #region Actions
-
         public IList<IWebElement> Items()
         {
             ExtentObj.Test = ExtentObj.Report.CreateTest("InventoryTest").Info("Inventory Test Started");
@@ -38,7 +35,6 @@ namespace CSharpFrameworkClassLib.Pages.PageObjects
         {
             ExtentObj.Test.Log(Status.Info, "Products Prices are Visible");
             return GetLists(itemsPrice);
-
         }
       
         public void AddItemsToCart()
@@ -55,7 +51,6 @@ namespace CSharpFrameworkClassLib.Pages.PageObjects
         {
             ClickWrapper(cartBtn);
             ExtentObj.Test.Log(Status.Info, "Cart Button is Clicked");
-            
         }
 
         public void verifyNavigation()

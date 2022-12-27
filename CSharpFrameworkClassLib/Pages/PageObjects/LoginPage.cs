@@ -1,14 +1,7 @@
 ﻿using UtilityClassLib.Utilities.Selenium;
 using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UtilityLibrary.Utilities.PageUtility;
 using AventStack.ExtentReports;
-using NUnit.Framework;
-using NUnit.Framework.Interfaces;
 using UtilityClassLib.Report;
 
 namespace CSharpFrameworkClassLib.Pages.PageObjects
@@ -17,9 +10,7 @@ namespace CSharpFrameworkClassLib.Pages.PageObjects
     {
         #region Locators
         private By UserName => GetXpathUsingID("user-name");
-
         private By UserPass => GetXpathUsingID("password");
-
         private By LoginBtn => GetXpathUsingID("login-button");
         #endregion
 

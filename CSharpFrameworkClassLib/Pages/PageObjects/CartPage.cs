@@ -1,11 +1,6 @@
 ﻿using AventStack.ExtentReports;
 using UtilityClassLib.Utilities.Selenium;
 using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UtilityClassLib.Report;
 using UtilityLibrary.Utilities.PageUtility;
 
@@ -13,20 +8,15 @@ namespace CSharpFrameworkClassLib.Pages.PageObjects
 {
     public class CartPage : PageUtiltiy
     {
-       
         private InventoryPage inventoryPage = new InventoryPage();
         #region locators
-
         By itemsPrice => GetXpathUsingDivClass("inventory_item_price");
-
         By itemsTitle => GetXpathUsingDivClass("inventory_item_name");
-
         By checkoutBtn => GetByID("checkout");
         #endregion
 
         #region Elements
 
-        
         public IList<IWebElement> getItemsTitle()
         {
             return GetLists(itemsTitle);
@@ -40,7 +30,6 @@ namespace CSharpFrameworkClassLib.Pages.PageObjects
             ClickWrapper(checkoutBtn);
             //info
         }
-
         public bool VerifyItemsAreCorrect()
         {
             bool res = true;
@@ -55,7 +44,6 @@ namespace CSharpFrameworkClassLib.Pages.PageObjects
 
             return res;
         }
-
         public void VerifyListofProducts()
         {
             ExtentObj.Test = ExtentObj.Report.CreateTest("Cart Test").Info("Cart Test Started");
@@ -64,21 +52,12 @@ namespace CSharpFrameworkClassLib.Pages.PageObjects
             if (VerifyItemsAreCorrect())
             {
                 ExtentObj.Test.Log(Status.Pass, ExtentReport.CaptureScreenShot(BasePage.CurrentDriver, "Same Product are in Cart Page"));
-                
             }
             else{
                 ExtentObj.Test.Log(Status.Fail, ExtentReport.CaptureScreenShot(BasePage.CurrentDriver, "Same Product was not there in Cart Page"));
-                
             }
         }
 
-        //public void TestPassed()
-        //{
-        //    if (extentReport.test.Status == Status.Pass)
-        //        extentReport.test.Log(Status.Pass, "Cart Test Passed");
-        //    else
-        //        extentReport.test.Log(Status.Fail, "Cart Test Failed");
-        //}
         #endregion
 
     }

@@ -1,0 +1,58 @@
+{
+  "uuid": "b1f93877dac545cabf9be006f0932f93",
+  "children": [
+    "d1eb786e6ed04d21badc904cde85a92e"
+  ],
+  "befores": [
+    {
+      "name": "StartChromeDriver [10000]",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672059151630,
+      "stop": 1672059153944
+    },
+    {
+      "name": "LoginHooks [10000]",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672059153944,
+      "stop": 1672059161157
+    }
+  ],
+  "afters": [
+    {
+      "name": "StopWebDriver [10000]",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672059161888,
+      "stop": 1672059162735
+    }
+  ],
+  "links": [],
+  "start": 1672059151628,
+  "stop": 1672059162792
+}

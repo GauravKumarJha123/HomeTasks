@@ -1,0 +1,100 @@
+{
+  "uuid": "77c700da0ce448e9aefcc447284df016",
+  "historyId": "Verifying whether items are Added To cart or not",
+  "fullName": "Verifying whether items are Added To cart or not",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#3"
+    },
+    {
+      "name": "host",
+      "value": "EPINHYDW076A"
+    },
+    {
+      "name": "feature",
+      "value": "03. Cart Execution Order = 3"
+    },
+    {
+      "name": "tag",
+      "value": "Cart"
+    }
+  ],
+  "links": [],
+  "name": "Verifying whether items are Added To cart or not",
+  "status": "broken",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "invalid session id",
+    "trace": "OpenQA.Selenium.WebDriverException: invalid session id\r\n   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.GetScreenshot()\r\n   at UtilityClassLib.Hooks.SpecFlowHooks.CaptureScreenshotAllure() in C:\\Users\\Gaurav_Jha\\source\\repos\\CSharpFramework\\CSharpFramework\\Hooks\\SpecFlowHooks.cs:line 69\r\n   at UtilityClassLib.Hooks.SpecFlowHooks.AfterStep() in C:\\Users\\Gaurav_Jha\\source\\repos\\CSharpFramework\\CSharpFramework\\Hooks\\SpecFlowHooks.cs:line 63\r\n   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)\r\n   at Allure.SpecFlowPlugin.AllureBindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  I am logged in Sucessfully",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672059281314,
+      "stop": 1672059281328
+    },
+    {
+      "name": "And  I have Added Items To Cart",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672059281328,
+      "stop": 1672059281332
+    },
+    {
+      "name": "When  I Navigate To Cart Page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672059281332,
+      "stop": 1672059281334
+    },
+    {
+      "name": "Then  I See My List Of Products",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672059281334,
+      "stop": 1672059281829
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1672059281314,
+  "stop": 1672059281830
+}

@@ -1,0 +1,43 @@
+{
+  "uuid": "23aaf0ffc48c4d498f1ab0d2c9429fee",
+  "children": [
+    "3aef4a8830444abb9fdb9daa12289cce"
+  ],
+  "befores": [
+    {
+      "name": "StartChromeDriver [10000]",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672056291298,
+      "stop": 1672056293490
+    }
+  ],
+  "afters": [
+    {
+      "name": "StopWebDriver [10000]",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672056298022,
+      "stop": 1672056314684
+    }
+  ],
+  "links": [],
+  "start": 1672056291297,
+  "stop": 1672056341844
+}

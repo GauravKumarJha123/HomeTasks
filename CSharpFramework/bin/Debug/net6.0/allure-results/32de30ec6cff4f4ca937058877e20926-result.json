@@ -1,0 +1,98 @@
+{
+  "uuid": "03bf155f6c4e484899791c4d9d28b5a8",
+  "historyId": "Verifying whether items are Added To cart or not",
+  "fullName": "Verifying whether items are Added To cart or not",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#3"
+    },
+    {
+      "name": "host",
+      "value": "EPINHYDW076A"
+    },
+    {
+      "name": "feature",
+      "value": "03. Cart Execution Order = 3"
+    },
+    {
+      "name": "tag",
+      "value": "Cart"
+    }
+  ],
+  "links": [],
+  "name": "Verifying whether items are Added To cart or not",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  I am logged in Sucessfully",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672050762655,
+      "stop": 1672050762687
+    },
+    {
+      "name": "And  I have Added Items To Cart",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672050762687,
+      "stop": 1672050762700
+    },
+    {
+      "name": "When  I Navigate To Cart Page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672050762700,
+      "stop": 1672050762710
+    },
+    {
+      "name": "Then  I See My List Of Products",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1672050762710,
+      "stop": 1672050764331
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1672050762655,
+  "stop": 1672050764331
+}
